@@ -1,0 +1,1468 @@
+2017-01-08 15:02:23.566 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.8.v20160314
+2017-01-08 15:02:23.878 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 6.3.0
+2017-01-08 15:02:23.878 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2017-01-08 15:02:23.878 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /Users/user/solr-6.3.0
+2017-01-08 15:02:23.937 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2017-01-08T15:02:23.879Z
+2017-01-08 15:02:23.938 INFO  (main) [   ] o.a.s.s.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2017-01-08 15:02:23.956 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: /Users/user/solr-6.3.0/server/solr
+2017-01-08 15:02:23.962 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /Users/user/solr-6.3.0/server/solr/solr.xml
+2017-01-08 15:02:24.214 INFO  (main) [   ] o.a.s.u.UpdateShardHandler Creating UpdateShardHandler HTTP client with params: socketTimeout=600000&connTimeout=60000&retry=true
+2017-01-08 15:02:24.273 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath /Users/user/solr-6.3.0/server/solr
+2017-01-08 15:02:24.280 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [core0]
+2017-01-08 15:02:24.332 INFO  (main) [   ] o.e.j.s.ServerConnector Started ServerConnector@70325e14{HTTP/1.1,[http/1.1]}{0.0.0.0:8983}
+2017-01-08 15:02:24.332 INFO  (main) [   ] o.e.j.s.Server Started @1364ms
+2017-01-08 15:02:24.382 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.SolrResourceLoader [core0] Added 46 libs to classloader, from paths: [/Users/user/solr-6.3.0/contrib/extraction/lib, /Users/user/solr-6.3.0/contrib/langid/lib, /Users/user/solr-6.3.0/contrib/velocity/lib, /Users/user/solr-6.3.0/dist]
+2017-01-08 15:02:24.531 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.u.SolrIndexConfig IndexWriter infoStream solr logging is enabled
+2017-01-08 15:02:24.538 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.SolrConfig Using Lucene MatchVersion: 6.3.0
+2017-01-08 15:02:24.702 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.s.ManagedIndexSchemaFactory The schema is configured as managed, but managed schema resource managed-schema not found - loading non-managed schema schema.xml instead
+2017-01-08 15:02:24.780 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.s.IndexSchema [core0] Schema name=eol_candidates_schema
+2017-01-08 15:02:25.610 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.s.IndexSchema Loaded schema eol_candidates_schema/1.6 with uniqueid field cb_id
+2017-01-08 15:02:25.690 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /Users/user/solr-6.3.0/server/solr/core0/conf/managed-schema
+2017-01-08 15:02:25.692 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.s.ManagedIndexSchemaFactory After upgrading to managed schema, renamed the non-managed schema /Users/user/solr-6.3.0/server/solr/core0/conf/schema.xml to /Users/user/solr-6.3.0/server/solr/core0/conf/schema.xml.bak
+2017-01-08 15:02:25.696 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.CoreContainer Creating SolrCore 'core0' using configuration from instancedir /Users/user/solr-6.3.0/server/solr/core0
+2017-01-08 15:02:25.742 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.c.SolrCore [[core0] ] Opening new SolrCore at [/Users/user/solr-6.3.0/server/solr/core0], dataDir=[/Users/user/solr-6.3.0/server/solr/core0/data/]
+2017-01-08 15:02:25.804 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2017-01-08 15:02:26.154 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2017-01-08 15:02:26.154 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2017-01-08 15:02:26.179 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2017-01-08 15:02:26.180 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2017-01-08 15:02:26.274 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.s.SolrIndexSearcher Opening [Searcher@2056b885[core0] main]
+2017-01-08 15:02:26.283 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /Users/user/solr-6.3.0/server/solr/core0/conf
+2017-01-08 15:02:26.300 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-01-08 15:02:26.312 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2017-01-08 15:02:26.369 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.h.c.SuggestComponent Initializing SuggestComponent
+2017-01-08 15:02:26.375 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.s.s.SolrSuggester init: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string}
+2017-01-08 15:02:26.406 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.s.s.SolrSuggester Dictionary loaded with params: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string}
+2017-01-08 15:02:26.407 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.h.c.SuggestComponent Registering searcher listener for suggester: mySuggester - SuggesterListener [core=org.apache.solr.core.SolrCore@2d64ff3b, suggester=SolrSuggester [ name=mySuggester, sourceLocation=null, storeDir=, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, sizeInBytes=0 ], buildOnCommit=false, buildOnOptimize=false, buildOnStartup=true, isCoreReload=false]
+2017-01-08 15:02:26.408 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.h.c.QueryElevationComponent Loading QueryElevation from: /Users/user/solr-6.3.0/server/solr/core0/conf/elevate.xml
+2017-01-08 15:02:26.429 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2017-01-08 15:02:26.462 INFO  (searcherExecutor-7-thread-1-processing-x:core0) [   x:core0] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@2056b885[core0] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2017-01-08 15:02:26.538 INFO  (searcherExecutor-7-thread-1-processing-x:core0) [   x:core0] o.a.s.c.S.Request [core0]  webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=0 status=0 QTime=73
+2017-01-08 15:02:26.539 INFO  (searcherExecutor-7-thread-1-processing-x:core0) [   x:core0] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-01-08 15:02:26.539 INFO  (searcherExecutor-7-thread-1-processing-x:core0) [   x:core0] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2017-01-08 15:02:26.539 INFO  (searcherExecutor-7-thread-1-processing-x:core0) [   x:core0] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: wordbreak
+2017-01-08 15:02:26.539 INFO  (searcherExecutor-7-thread-1-processing-x:core0) [   x:core0] o.a.s.h.c.SuggestComponent buildOnStartup: mySuggester
+2017-01-08 15:02:26.539 INFO  (searcherExecutor-7-thread-1-processing-x:core0) [   x:core0] o.a.s.s.s.SolrSuggester SolrSuggester.build(mySuggester)
+2017-01-08 15:02:26.554 INFO  (searcherExecutor-7-thread-1-processing-x:core0) [   x:core0] o.a.s.c.SolrCore [core0] Registered new searcher Searcher@2056b885[core0] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2017-01-08 15:02:37.098 INFO  (qtp761960786-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483887142508} status=0 QTime=2
+2017-01-08 15:02:37.100 INFO  (qtp761960786-16) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/mbeans params={cat=QUERYHANDLER&wt=json&_=1483887144491} status=0 QTime=4
+2017-01-08 15:02:37.198 INFO  (qtp761960786-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483887142508} status=0 QTime=0
+2017-01-08 15:02:37.218 INFO  (qtp761960786-12) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/mbeans params={cat=QUERYHANDLER&wt=json&_=1483887144491} status=0 QTime=4
+2017-01-08 15:02:37.219 INFO  (qtp761960786-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483887142508} status=0 QTime=122
+2017-01-08 15:02:37.225 INFO  (qtp761960786-18) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=show-config&_=1483887144492} status=0 QTime=5
+2017-01-08 15:02:37.272 INFO  (qtp761960786-19) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1483887144492} status=0 QTime=0
+2017-01-08 15:02:37.284 INFO  (qtp761960786-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483887142508} status=0 QTime=47
+2017-01-08 15:02:38.730 INFO  (qtp761960786-21) [   x:core0] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2017-01-08 15:02:38.744 INFO  (qtp761960786-21) [   x:core0] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2017-01-08 15:02:38.752 INFO  (Thread-14) [   x:core0] o.a.s.h.d.DataImporter Starting Full Import
+2017-01-08 15:02:38.752 INFO  (qtp761960786-21) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={core=core0&optimize=false&indent=on&commit=true&name=dataimport&clean=true&wt=json&command=full-import&_=1483887144492&verbose=false} status=0 QTime=24
+2017-01-08 15:02:38.762 INFO  (qtp761960786-16) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1483887144492} status=0 QTime=0
+2017-01-08 15:02:38.789 INFO  (Thread-14) [   x:core0] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2017-01-08 15:02:38.912 INFO  (Thread-14) [   x:core0] o.a.s.h.d.JdbcDataSource Creating a connection for entity candidate_basic with URL: jdbc:mysql://127.0.0.1:3306/eol_candidates
+2017-01-08 15:02:39.187 INFO  (Thread-14) [   x:core0] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 275
+2017-01-08 15:02:39.645 ERROR (Thread-14) [   x:core0] o.a.s.h.d.EntityProcessorBase getNext() failed for query 'select * from candidate_basic':org.apache.solr.handler.dataimport.DataImportHandlerException: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:61)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:464)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator$1.hasNext(JdbcDataSource.java:377)
+	at org.apache.solr.handler.dataimport.EntityProcessorBase.getNext(EntityProcessorBase.java:133)
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextRow(SqlEntityProcessor.java:75)
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextRow(EntityProcessorWrapper.java:244)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:475)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:414)
+	at org.apache.solr.handler.dataimport.DocBuilder.doFullDump(DocBuilder.java:329)
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:232)
+	at org.apache.solr.handler.dataimport.DataImporter.doFullImport(DataImporter.java:416)
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:475)
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:458)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ResultSetImpl.checkClosed(ResultSetImpl.java:803)
+	at com.mysql.jdbc.ResultSetImpl.next(ResultSetImpl.java:6985)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2251)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2235)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:458)
+	... 12 more
+
+2017-01-08 15:02:39.646 ERROR (Thread-14) [   x:core0] o.a.s.h.d.DocBuilder Exception while processing: candidate_basic document : SolrInputDocument(fields: []):org.apache.solr.handler.dataimport.DataImportHandlerException: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:61)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:464)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator$1.hasNext(JdbcDataSource.java:377)
+	at org.apache.solr.handler.dataimport.EntityProcessorBase.getNext(EntityProcessorBase.java:133)
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextRow(SqlEntityProcessor.java:75)
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextRow(EntityProcessorWrapper.java:244)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:475)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:414)
+	at org.apache.solr.handler.dataimport.DocBuilder.doFullDump(DocBuilder.java:329)
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:232)
+	at org.apache.solr.handler.dataimport.DataImporter.doFullImport(DataImporter.java:416)
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:475)
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:458)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ResultSetImpl.checkClosed(ResultSetImpl.java:803)
+	at com.mysql.jdbc.ResultSetImpl.next(ResultSetImpl.java:6985)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2251)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2235)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:458)
+	... 12 more
+
+2017-01-08 15:02:39.648 INFO  (Thread-14) [   x:core0] o.a.s.u.p.LogUpdateProcessorFactory [core0]  webapp=/solr path=/dataimport params={core=core0&optimize=false&indent=on&commit=true&name=dataimport&clean=true&wt=json&command=full-import&_=1483887144492&verbose=false} status=0 QTime=24{deleteByQuery=*:* (-1555969090658500608),add=[687 (1555969091000336384), 688 (1555969091065348096), 689 (1555969091070590976), 690 (1555969091072688128), 691 (1555969091075833856), 692 (1555969091077931008), 693 (1555969091080028160), 694 (1555969091082125312), 695 (1555969091084222464), 696 (1555969091086319616), ... (347 adds)]} 0 919
+2017-01-08 15:02:39.655 ERROR (Thread-14) [   x:core0] o.a.s.h.d.DataImporter Full Import failed:java.lang.RuntimeException: java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:270)
+	at org.apache.solr.handler.dataimport.DataImporter.doFullImport(DataImporter.java:416)
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:475)
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:458)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:416)
+	at org.apache.solr.handler.dataimport.DocBuilder.doFullDump(DocBuilder.java:329)
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:232)
+	... 4 more
+Caused by: org.apache.solr.handler.dataimport.DataImportHandlerException: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:61)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:464)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator$1.hasNext(JdbcDataSource.java:377)
+	at org.apache.solr.handler.dataimport.EntityProcessorBase.getNext(EntityProcessorBase.java:133)
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextRow(SqlEntityProcessor.java:75)
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextRow(EntityProcessorWrapper.java:244)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:475)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:414)
+	... 6 more
+Caused by: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ResultSetImpl.checkClosed(ResultSetImpl.java:803)
+	at com.mysql.jdbc.ResultSetImpl.next(ResultSetImpl.java:6985)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2251)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2235)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:458)
+	... 12 more
+
+2017-01-08 15:02:39.659 INFO  (Thread-14) [   x:core0] o.a.s.u.DirectUpdateHandler2 start rollback{}
+2017-01-08 15:02:39.671 INFO  (Thread-14) [   x:core0] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2017-01-08 15:02:39.671 INFO  (Thread-14) [   x:core0] o.a.s.u.DirectUpdateHandler2 end_rollback
+2017-01-08 15:03:57.367 INFO  (qtp761960786-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483887142508} status=0 QTime=0
+2017-01-08 15:03:57.391 INFO  (qtp761960786-16) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/replication params={wt=json&command=details&_=1483887142585} status=0 QTime=2
+2017-01-08 15:03:57.402 INFO  (qtp761960786-21) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1483887142584} status=0 QTime=8
+2017-01-08 15:03:57.407 INFO  (qtp761960786-19) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1483887142508&ts=1483887142508} status=503 QTime=3
+2017-01-08 15:03:57.475 INFO  (qtp761960786-13) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/system params={wt=json&_=1483887142584} status=0 QTime=74
+2017-01-08 15:03:57.515 INFO  (qtp761960786-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483887142508} status=0 QTime=122
+2017-01-08 15:04:33.919 INFO  (qtp761960786-12) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483887142508} status=0 QTime=0
+2017-01-08 15:04:33.942 INFO  (qtp761960786-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483887142508} status=0 QTime=23
+2017-01-08 15:04:35.302 INFO  (qtp761960786-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483887142508} status=0 QTime=0
+2017-01-08 15:04:35.328 INFO  (qtp761960786-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483887142508} status=0 QTime=29
+2017-01-08 15:04:35.330 INFO  (qtp761960786-21) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/mbeans params={stats=true&wt=json&_=1483887144491} status=0 QTime=25
+2017-01-08 15:04:36.145 INFO  (qtp761960786-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483887142508} status=0 QTime=0
+2017-01-08 15:04:36.157 INFO  (qtp761960786-16) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/mbeans params={cat=QUERYHANDLER&wt=json&_=1483887144491} status=0 QTime=0
+2017-01-08 15:04:36.178 INFO  (qtp761960786-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483887142508} status=0 QTime=23
+2017-01-08 15:04:36.223 INFO  (qtp761960786-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483887142508} status=0 QTime=0
+2017-01-08 15:04:36.226 INFO  (qtp761960786-18) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/mbeans params={cat=QUERYHANDLER&wt=json&_=1483887144491} status=0 QTime=0
+2017-01-08 15:04:36.240 INFO  (qtp761960786-18) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=show-config&_=1483887144492} status=0 QTime=2
+2017-01-08 15:04:36.273 INFO  (qtp761960786-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483887142508} status=0 QTime=45
+2017-01-08 15:04:36.290 INFO  (qtp761960786-21) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1483887144492} status=0 QTime=1
+2017-01-08 15:04:47.252 INFO  (qtp761960786-19) [   x:core0] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2017-01-08 15:04:47.256 INFO  (qtp761960786-19) [   x:core0] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2017-01-08 15:04:47.259 INFO  (qtp761960786-19) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={core=core0&optimize=false&indent=on&commit=false&name=dataimport&clean=false&wt=json&command=full-import&_=1483887144492&verbose=false} status=0 QTime=8
+2017-01-08 15:04:47.260 INFO  (Thread-15) [   x:core0] o.a.s.h.d.DataImporter Starting Full Import
+2017-01-08 15:04:47.266 INFO  (Thread-15) [   x:core0] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2017-01-08 15:04:47.275 INFO  (Thread-15) [   x:core0] o.a.s.h.d.JdbcDataSource Creating a connection for entity candidate_basic with URL: jdbc:mysql://127.0.0.1:3306/eol_candidates
+2017-01-08 15:04:47.279 INFO  (qtp761960786-12) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1483887144492} status=0 QTime=3
+2017-01-08 15:04:47.331 INFO  (Thread-15) [   x:core0] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 55
+2017-01-08 15:04:47.547 ERROR (Thread-15) [   x:core0] o.a.s.h.d.EntityProcessorBase getNext() failed for query 'select * from candidate_basic':org.apache.solr.handler.dataimport.DataImportHandlerException: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:61)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:464)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator$1.hasNext(JdbcDataSource.java:377)
+	at org.apache.solr.handler.dataimport.EntityProcessorBase.getNext(EntityProcessorBase.java:133)
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextRow(SqlEntityProcessor.java:75)
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextRow(EntityProcessorWrapper.java:244)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:475)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:414)
+	at org.apache.solr.handler.dataimport.DocBuilder.doFullDump(DocBuilder.java:329)
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:232)
+	at org.apache.solr.handler.dataimport.DataImporter.doFullImport(DataImporter.java:416)
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:475)
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:458)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ResultSetImpl.checkClosed(ResultSetImpl.java:803)
+	at com.mysql.jdbc.ResultSetImpl.next(ResultSetImpl.java:6985)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2251)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2235)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:458)
+	... 12 more
+
+2017-01-08 15:04:47.547 ERROR (Thread-15) [   x:core0] o.a.s.h.d.DocBuilder Exception while processing: candidate_basic document : SolrInputDocument(fields: []):org.apache.solr.handler.dataimport.DataImportHandlerException: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:61)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:464)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator$1.hasNext(JdbcDataSource.java:377)
+	at org.apache.solr.handler.dataimport.EntityProcessorBase.getNext(EntityProcessorBase.java:133)
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextRow(SqlEntityProcessor.java:75)
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextRow(EntityProcessorWrapper.java:244)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:475)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:414)
+	at org.apache.solr.handler.dataimport.DocBuilder.doFullDump(DocBuilder.java:329)
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:232)
+	at org.apache.solr.handler.dataimport.DataImporter.doFullImport(DataImporter.java:416)
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:475)
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:458)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ResultSetImpl.checkClosed(ResultSetImpl.java:803)
+	at com.mysql.jdbc.ResultSetImpl.next(ResultSetImpl.java:6985)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2251)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2235)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:458)
+	... 12 more
+
+2017-01-08 15:04:47.548 INFO  (Thread-15) [   x:core0] o.a.s.u.p.LogUpdateProcessorFactory [core0]  webapp=/solr path=/dataimport params={core=core0&optimize=false&indent=on&commit=false&name=dataimport&clean=false&wt=json&command=full-import&_=1483887144492&verbose=false} status=0 QTime=8{add=[687 (1555969225360670720), 688 (1555969225362767872), 689 (1555969225363816448), 690 (1555969225363816449), 691 (1555969225364865024), 692 (1555969225364865025), 693 (1555969225365913600), 694 (1555969225365913601), 695 (1555969225366962176), 696 (1555969225366962177), ... (347 adds)]} 0 296
+2017-01-08 15:04:47.550 ERROR (Thread-15) [   x:core0] o.a.s.h.d.DataImporter Full Import failed:java.lang.RuntimeException: java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:270)
+	at org.apache.solr.handler.dataimport.DataImporter.doFullImport(DataImporter.java:416)
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:475)
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:458)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:416)
+	at org.apache.solr.handler.dataimport.DocBuilder.doFullDump(DocBuilder.java:329)
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:232)
+	... 4 more
+Caused by: org.apache.solr.handler.dataimport.DataImportHandlerException: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:61)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:464)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator$1.hasNext(JdbcDataSource.java:377)
+	at org.apache.solr.handler.dataimport.EntityProcessorBase.getNext(EntityProcessorBase.java:133)
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextRow(SqlEntityProcessor.java:75)
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextRow(EntityProcessorWrapper.java:244)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:475)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:414)
+	... 6 more
+Caused by: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ResultSetImpl.checkClosed(ResultSetImpl.java:803)
+	at com.mysql.jdbc.ResultSetImpl.next(ResultSetImpl.java:6985)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2251)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2235)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:458)
+	... 12 more
+
+2017-01-08 15:04:47.550 INFO  (Thread-15) [   x:core0] o.a.s.u.DirectUpdateHandler2 start rollback{}
+2017-01-08 15:04:47.552 INFO  (Thread-15) [   x:core0] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2017-01-08 15:04:47.553 INFO  (Thread-15) [   x:core0] o.a.s.u.DirectUpdateHandler2 end_rollback
+2017-01-08 15:04:54.644 INFO  (qtp761960786-16) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1483887144492} status=0 QTime=0
+2017-01-08 15:05:10.989 INFO  (qtp761960786-13) [   x:core0] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2017-01-08 15:05:10.993 INFO  (qtp761960786-13) [   x:core0] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2017-01-08 15:05:10.994 INFO  (qtp761960786-13) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={core=core0&optimize=false&indent=on&commit=false&name=dataimport&clean=false&wt=json&command=full-import&_=1483887144492&verbose=false} status=0 QTime=5
+2017-01-08 15:05:10.994 INFO  (Thread-16) [   x:core0] o.a.s.h.d.DataImporter Starting Full Import
+2017-01-08 15:05:11.009 INFO  (qtp761960786-18) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1483887144492} status=0 QTime=0
+2017-01-08 15:05:11.019 INFO  (Thread-16) [   x:core0] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2017-01-08 15:05:11.024 INFO  (Thread-16) [   x:core0] o.a.s.h.d.JdbcDataSource Creating a connection for entity candidate_basic with URL: jdbc:mysql://127.0.0.1:3306/eol_candidates
+2017-01-08 15:05:11.046 INFO  (Thread-16) [   x:core0] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 21
+2017-01-08 15:05:11.219 ERROR (Thread-16) [   x:core0] o.a.s.h.d.EntityProcessorBase getNext() failed for query 'select * from candidate_basic':org.apache.solr.handler.dataimport.DataImportHandlerException: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:61)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:464)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator$1.hasNext(JdbcDataSource.java:377)
+	at org.apache.solr.handler.dataimport.EntityProcessorBase.getNext(EntityProcessorBase.java:133)
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextRow(SqlEntityProcessor.java:75)
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextRow(EntityProcessorWrapper.java:244)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:475)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:414)
+	at org.apache.solr.handler.dataimport.DocBuilder.doFullDump(DocBuilder.java:329)
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:232)
+	at org.apache.solr.handler.dataimport.DataImporter.doFullImport(DataImporter.java:416)
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:475)
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:458)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ResultSetImpl.checkClosed(ResultSetImpl.java:803)
+	at com.mysql.jdbc.ResultSetImpl.next(ResultSetImpl.java:6985)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2251)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2235)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:458)
+	... 12 more
+
+2017-01-08 15:05:11.219 ERROR (Thread-16) [   x:core0] o.a.s.h.d.DocBuilder Exception while processing: candidate_basic document : SolrInputDocument(fields: []):org.apache.solr.handler.dataimport.DataImportHandlerException: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:61)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:464)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator$1.hasNext(JdbcDataSource.java:377)
+	at org.apache.solr.handler.dataimport.EntityProcessorBase.getNext(EntityProcessorBase.java:133)
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextRow(SqlEntityProcessor.java:75)
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextRow(EntityProcessorWrapper.java:244)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:475)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:414)
+	at org.apache.solr.handler.dataimport.DocBuilder.doFullDump(DocBuilder.java:329)
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:232)
+	at org.apache.solr.handler.dataimport.DataImporter.doFullImport(DataImporter.java:416)
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:475)
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:458)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ResultSetImpl.checkClosed(ResultSetImpl.java:803)
+	at com.mysql.jdbc.ResultSetImpl.next(ResultSetImpl.java:6985)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2251)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2235)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:458)
+	... 12 more
+
+2017-01-08 15:05:11.220 INFO  (Thread-16) [   x:core0] o.a.s.u.p.LogUpdateProcessorFactory [core0]  webapp=/solr path=/dataimport params={core=core0&optimize=false&indent=on&commit=false&name=dataimport&clean=false&wt=json&command=full-import&_=1483887144492&verbose=false} status=0 QTime=5{add=[687 (1555969250227650560), 688 (1555969250234990592), 689 (1555969250234990593), 690 (1555969250236039168), 691 (1555969250236039169), 692 (1555969250237087744), 693 (1555969250237087745), 694 (1555969250237087746), 695 (1555969250238136320), 696 (1555969250238136321), ... (347 adds)]} 0 231
+2017-01-08 15:05:11.221 ERROR (Thread-16) [   x:core0] o.a.s.h.d.DataImporter Full Import failed:java.lang.RuntimeException: java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:270)
+	at org.apache.solr.handler.dataimport.DataImporter.doFullImport(DataImporter.java:416)
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:475)
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:458)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:416)
+	at org.apache.solr.handler.dataimport.DocBuilder.doFullDump(DocBuilder.java:329)
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:232)
+	... 4 more
+Caused by: org.apache.solr.handler.dataimport.DataImportHandlerException: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:61)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:464)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator$1.hasNext(JdbcDataSource.java:377)
+	at org.apache.solr.handler.dataimport.EntityProcessorBase.getNext(EntityProcessorBase.java:133)
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextRow(SqlEntityProcessor.java:75)
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextRow(EntityProcessorWrapper.java:244)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:475)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:414)
+	... 6 more
+Caused by: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ResultSetImpl.checkClosed(ResultSetImpl.java:803)
+	at com.mysql.jdbc.ResultSetImpl.next(ResultSetImpl.java:6985)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2251)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2235)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:458)
+	... 12 more
+
+2017-01-08 15:05:11.221 INFO  (Thread-16) [   x:core0] o.a.s.u.DirectUpdateHandler2 start rollback{}
+2017-01-08 15:05:11.229 INFO  (Thread-16) [   x:core0] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2017-01-08 15:05:11.229 INFO  (Thread-16) [   x:core0] o.a.s.u.DirectUpdateHandler2 end_rollback
+2017-01-08 15:05:23.644 INFO  (qtp761960786-15) [   x:core0] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2017-01-08 15:05:23.648 INFO  (qtp761960786-15) [   x:core0] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2017-01-08 15:05:23.650 INFO  (Thread-17) [   x:core0] o.a.s.h.d.DataImporter Starting Full Import
+2017-01-08 15:05:23.651 INFO  (qtp761960786-15) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={core=core0&optimize=false&indent=on&commit=false&name=dataimport&clean=false&wt=json&command=full-import&_=1483887144492&verbose=false} status=0 QTime=6
+2017-01-08 15:05:23.654 INFO  (Thread-17) [   x:core0] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2017-01-08 15:05:23.661 INFO  (Thread-17) [   x:core0] o.a.s.h.d.JdbcDataSource Creating a connection for entity candidate_basic with URL: jdbc:mysql://127.0.0.1:3306/eol_candidates
+2017-01-08 15:05:23.663 INFO  (qtp761960786-14) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1483887144492} status=0 QTime=0
+2017-01-08 15:05:23.711 INFO  (Thread-17) [   x:core0] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 50
+2017-01-08 15:05:23.885 ERROR (Thread-17) [   x:core0] o.a.s.h.d.EntityProcessorBase getNext() failed for query 'select * from candidate_basic':org.apache.solr.handler.dataimport.DataImportHandlerException: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:61)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:464)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator$1.hasNext(JdbcDataSource.java:377)
+	at org.apache.solr.handler.dataimport.EntityProcessorBase.getNext(EntityProcessorBase.java:133)
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextRow(SqlEntityProcessor.java:75)
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextRow(EntityProcessorWrapper.java:244)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:475)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:414)
+	at org.apache.solr.handler.dataimport.DocBuilder.doFullDump(DocBuilder.java:329)
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:232)
+	at org.apache.solr.handler.dataimport.DataImporter.doFullImport(DataImporter.java:416)
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:475)
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:458)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ResultSetImpl.checkClosed(ResultSetImpl.java:803)
+	at com.mysql.jdbc.ResultSetImpl.next(ResultSetImpl.java:6985)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2251)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2235)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:458)
+	... 12 more
+
+2017-01-08 15:05:23.886 ERROR (Thread-17) [   x:core0] o.a.s.h.d.DocBuilder Exception while processing: candidate_basic document : SolrInputDocument(fields: []):org.apache.solr.handler.dataimport.DataImportHandlerException: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:61)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:464)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator$1.hasNext(JdbcDataSource.java:377)
+	at org.apache.solr.handler.dataimport.EntityProcessorBase.getNext(EntityProcessorBase.java:133)
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextRow(SqlEntityProcessor.java:75)
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextRow(EntityProcessorWrapper.java:244)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:475)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:414)
+	at org.apache.solr.handler.dataimport.DocBuilder.doFullDump(DocBuilder.java:329)
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:232)
+	at org.apache.solr.handler.dataimport.DataImporter.doFullImport(DataImporter.java:416)
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:475)
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:458)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ResultSetImpl.checkClosed(ResultSetImpl.java:803)
+	at com.mysql.jdbc.ResultSetImpl.next(ResultSetImpl.java:6985)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2251)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2235)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:458)
+	... 12 more
+
+2017-01-08 15:05:23.886 INFO  (Thread-17) [   x:core0] o.a.s.u.p.LogUpdateProcessorFactory [core0]  webapp=/solr path=/dataimport params={core=core0&optimize=false&indent=on&commit=false&name=dataimport&clean=false&wt=json&command=full-import&_=1483887144492&verbose=false} status=0 QTime=6{add=[687 (1555969263507865600), 688 (1555969263509962752), 689 (1555969263509962753), 690 (1555969263509962754), 691 (1555969263511011328), 692 (1555969263511011329), 693 (1555969263511011330), 694 (1555969263511011331), 695 (1555969263512059904), 696 (1555969263512059905), ... (347 adds)]} 0 242
+2017-01-08 15:05:23.889 ERROR (Thread-17) [   x:core0] o.a.s.h.d.DataImporter Full Import failed:java.lang.RuntimeException: java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:270)
+	at org.apache.solr.handler.dataimport.DataImporter.doFullImport(DataImporter.java:416)
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:475)
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:458)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:416)
+	at org.apache.solr.handler.dataimport.DocBuilder.doFullDump(DocBuilder.java:329)
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:232)
+	... 4 more
+Caused by: org.apache.solr.handler.dataimport.DataImportHandlerException: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:61)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:464)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator$1.hasNext(JdbcDataSource.java:377)
+	at org.apache.solr.handler.dataimport.EntityProcessorBase.getNext(EntityProcessorBase.java:133)
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextRow(SqlEntityProcessor.java:75)
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextRow(EntityProcessorWrapper.java:244)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:475)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:414)
+	... 6 more
+Caused by: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ResultSetImpl.checkClosed(ResultSetImpl.java:803)
+	at com.mysql.jdbc.ResultSetImpl.next(ResultSetImpl.java:6985)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2251)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2235)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:458)
+	... 12 more
+
+2017-01-08 15:05:23.889 INFO  (Thread-17) [   x:core0] o.a.s.u.DirectUpdateHandler2 start rollback{}
+2017-01-08 15:05:23.891 INFO  (Thread-17) [   x:core0] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2017-01-08 15:05:23.891 INFO  (Thread-17) [   x:core0] o.a.s.u.DirectUpdateHandler2 end_rollback
+2017-01-08 15:05:27.341 INFO  (qtp761960786-16) [   x:core0] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2017-01-08 15:05:27.346 INFO  (qtp761960786-16) [   x:core0] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2017-01-08 15:05:27.349 INFO  (qtp761960786-16) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={core=core0&optimize=false&indent=on&commit=false&name=dataimport&clean=false&wt=json&command=full-import&_=1483887144492&verbose=false} status=0 QTime=8
+2017-01-08 15:05:27.350 INFO  (Thread-18) [   x:core0] o.a.s.h.d.DataImporter Starting Full Import
+2017-01-08 15:05:27.355 INFO  (Thread-18) [   x:core0] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2017-01-08 15:05:27.367 INFO  (qtp761960786-13) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1483887144492} status=0 QTime=0
+2017-01-08 15:05:27.376 INFO  (Thread-18) [   x:core0] o.a.s.h.d.JdbcDataSource Creating a connection for entity candidate_basic with URL: jdbc:mysql://127.0.0.1:3306/eol_candidates
+2017-01-08 15:05:27.422 INFO  (Thread-18) [   x:core0] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 45
+2017-01-08 15:05:27.496 ERROR (Thread-18) [   x:core0] o.a.s.h.d.EntityProcessorBase getNext() failed for query 'select * from candidate_basic':org.apache.solr.handler.dataimport.DataImportHandlerException: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:61)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:464)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator$1.hasNext(JdbcDataSource.java:377)
+	at org.apache.solr.handler.dataimport.EntityProcessorBase.getNext(EntityProcessorBase.java:133)
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextRow(SqlEntityProcessor.java:75)
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextRow(EntityProcessorWrapper.java:244)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:475)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:414)
+	at org.apache.solr.handler.dataimport.DocBuilder.doFullDump(DocBuilder.java:329)
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:232)
+	at org.apache.solr.handler.dataimport.DataImporter.doFullImport(DataImporter.java:416)
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:475)
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:458)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ResultSetImpl.checkClosed(ResultSetImpl.java:803)
+	at com.mysql.jdbc.ResultSetImpl.next(ResultSetImpl.java:6985)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2251)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2235)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:458)
+	... 12 more
+
+2017-01-08 15:05:27.497 ERROR (Thread-18) [   x:core0] o.a.s.h.d.DocBuilder Exception while processing: candidate_basic document : SolrInputDocument(fields: []):org.apache.solr.handler.dataimport.DataImportHandlerException: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:61)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:464)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator$1.hasNext(JdbcDataSource.java:377)
+	at org.apache.solr.handler.dataimport.EntityProcessorBase.getNext(EntityProcessorBase.java:133)
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextRow(SqlEntityProcessor.java:75)
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextRow(EntityProcessorWrapper.java:244)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:475)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:414)
+	at org.apache.solr.handler.dataimport.DocBuilder.doFullDump(DocBuilder.java:329)
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:232)
+	at org.apache.solr.handler.dataimport.DataImporter.doFullImport(DataImporter.java:416)
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:475)
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:458)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ResultSetImpl.checkClosed(ResultSetImpl.java:803)
+	at com.mysql.jdbc.ResultSetImpl.next(ResultSetImpl.java:6985)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2251)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2235)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:458)
+	... 12 more
+
+2017-01-08 15:05:27.498 INFO  (Thread-18) [   x:core0] o.a.s.u.p.LogUpdateProcessorFactory [core0]  webapp=/solr path=/dataimport params={core=core0&optimize=false&indent=on&commit=false&name=dataimport&clean=false&wt=json&command=full-import&_=1483887144492&verbose=false} status=0 QTime=8{add=[687 (1555969267389693952), 688 (1555969267392839680), 689 (1555969267392839681), 690 (1555969267392839682), 691 (1555969267392839683), 692 (1555969267393888256), 693 (1555969267393888257), 694 (1555969267393888258), 695 (1555969267393888259), 696 (1555969267394936832), ... (347 adds)]} 0 157
+2017-01-08 15:05:27.505 ERROR (Thread-18) [   x:core0] o.a.s.h.d.DataImporter Full Import failed:java.lang.RuntimeException: java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:270)
+	at org.apache.solr.handler.dataimport.DataImporter.doFullImport(DataImporter.java:416)
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:475)
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:458)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:416)
+	at org.apache.solr.handler.dataimport.DocBuilder.doFullDump(DocBuilder.java:329)
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:232)
+	... 4 more
+Caused by: org.apache.solr.handler.dataimport.DataImportHandlerException: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:61)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:464)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator$1.hasNext(JdbcDataSource.java:377)
+	at org.apache.solr.handler.dataimport.EntityProcessorBase.getNext(EntityProcessorBase.java:133)
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextRow(SqlEntityProcessor.java:75)
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextRow(EntityProcessorWrapper.java:244)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:475)
+	at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:414)
+	... 6 more
+Caused by: java.sql.SQLException: Operation not allowed after ResultSet closed
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ResultSetImpl.checkClosed(ResultSetImpl.java:803)
+	at com.mysql.jdbc.ResultSetImpl.next(ResultSetImpl.java:6985)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2251)
+	at com.mysql.jdbc.StatementImpl.getMoreResults(StatementImpl.java:2235)
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.hasnext(JdbcDataSource.java:458)
+	... 12 more
+
+2017-01-08 15:05:27.505 INFO  (Thread-18) [   x:core0] o.a.s.u.DirectUpdateHandler2 start rollback{}
+2017-01-08 15:05:27.509 INFO  (Thread-18) [   x:core0] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2017-01-08 15:05:27.510 INFO  (Thread-18) [   x:core0] o.a.s.u.DirectUpdateHandler2 end_rollback
+2017-01-08 15:07:32.474 INFO  (qtp761960786-14) [   x:core0] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2017-01-08 15:07:32.483 INFO  (qtp761960786-14) [   x:core0] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2017-01-08 15:07:32.484 INFO  (qtp761960786-14) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={core=core0&optimize=false&indent=on&commit=false&name=dataimport&clean=false&wt=json&command=full-import&_=1483887144492&verbose=false} status=0 QTime=10
+2017-01-08 15:07:32.484 INFO  (Thread-19) [   x:core0] o.a.s.h.d.DataImporter Starting Full Import
+2017-01-08 15:07:32.491 INFO  (Thread-19) [   x:core0] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2017-01-08 15:07:32.499 INFO  (Thread-19) [   x:core0] o.a.s.h.d.JdbcDataSource Creating a connection for entity candidate_basic with URL: jdbc:mysql://127.0.0.1:3306/eol_candidates
+2017-01-08 15:07:32.506 INFO  (qtp761960786-21) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1483887144492} status=0 QTime=1
+2017-01-08 15:07:32.520 INFO  (Thread-19) [   x:core0] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 21
+2017-01-08 15:07:32.583 INFO  (Thread-19) [   x:core0] o.a.s.h.d.DocBuilder Import completed successfully
+2017-01-08 15:07:32.584 INFO  (Thread-19) [   x:core0] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2017-01-08 15:07:32.584 INFO  (Thread-19) [   x:core0] o.a.s.h.d.SimplePropertiesWriter Wrote last indexed time to dataimport.properties
+2017-01-08 15:07:32.584 INFO  (Thread-19) [   x:core0] o.a.s.h.d.DocBuilder Time taken = 0:0:0.93
+2017-01-08 15:07:32.584 INFO  (Thread-19) [   x:core0] o.a.s.u.p.LogUpdateProcessorFactory [core0]  webapp=/solr path=/dataimport params={core=core0&optimize=false&indent=on&commit=false&name=dataimport&clean=false&wt=json&command=full-import&_=1483887144492&verbose=false} status=0 QTime=10{add=[687 (1555969398564454400), 688 (1555969398568648704), 689 (1555969398568648705), 690 (1555969398568648706), 691 (1555969398568648707), 692 (1555969398569697280), 693 (1555969398569697281), 694 (1555969398569697282), 695 (1555969398570745856), 696 (1555969398570745857), ... (347 adds)]} 0 110
+2017-01-08 15:07:34.337 INFO  (qtp761960786-19) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1483887144492} status=0 QTime=0
+2017-01-08 15:07:36.729 INFO  (qtp761960786-12) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483887142508} status=0 QTime=0
+2017-01-08 15:07:36.748 INFO  (qtp761960786-16) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/replication params={wt=json&command=details&_=1483887142585} status=0 QTime=5
+2017-01-08 15:07:36.749 INFO  (qtp761960786-18) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1483887142584} status=0 QTime=7
+2017-01-08 15:07:36.753 INFO  (qtp761960786-21) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1483887142508&ts=1483887142508} status=503 QTime=0
+2017-01-08 15:07:36.783 INFO  (qtp761960786-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483887142508} status=0 QTime=52
+2017-01-08 15:07:36.795 INFO  (qtp761960786-13) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/system params={wt=json&_=1483887142584} status=0 QTime=47
+2017-01-08 15:07:38.794 INFO  (qtp761960786-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888058640} status=0 QTime=0
+2017-01-08 15:07:38.813 INFO  (qtp761960786-21) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/replication params={wt=json&command=details&_=1483888058767} status=0 QTime=0
+2017-01-08 15:07:38.819 INFO  (qtp761960786-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888058641} status=0 QTime=23
+2017-01-08 15:07:38.819 INFO  (qtp761960786-12) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1483888058766} status=0 QTime=10
+2017-01-08 15:07:38.828 INFO  (qtp761960786-15) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1483888058641&ts=1483888058641} status=503 QTime=0
+2017-01-08 15:07:38.844 INFO  (qtp761960786-20) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/system params={wt=json&_=1483888058766} status=0 QTime=20
+2017-01-08 15:07:39.963 INFO  (qtp761960786-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888059835} status=0 QTime=0
+2017-01-08 15:07:39.976 INFO  (qtp761960786-12) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1483888059945} status=0 QTime=4
+2017-01-08 15:07:39.977 INFO  (qtp761960786-21) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/replication params={wt=json&command=details&_=1483888059946} status=0 QTime=0
+2017-01-08 15:07:39.986 INFO  (qtp761960786-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888059836} status=0 QTime=22
+2017-01-08 15:07:39.994 INFO  (qtp761960786-20) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1483888059836&ts=1483888059836} status=503 QTime=0
+2017-01-08 15:07:40.007 INFO  (qtp761960786-15) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/system params={wt=json&_=1483888059945} status=0 QTime=22
+2017-01-08 15:07:41.573 INFO  (qtp761960786-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888059835} status=0 QTime=0
+2017-01-08 15:07:41.589 INFO  (qtp761960786-14) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1483888059945} status=0 QTime=10
+2017-01-08 15:07:41.615 INFO  (qtp761960786-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888059836} status=0 QTime=39
+2017-01-08 15:07:42.954 INFO  (qtp761960786-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888062832} status=0 QTime=0
+2017-01-08 15:07:42.970 INFO  (qtp761960786-15) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1483888062919} status=0 QTime=10
+2017-01-08 15:07:42.994 INFO  (qtp761960786-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888062833} status=0 QTime=34
+2017-01-08 15:07:44.386 INFO  (qtp761960786-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888064275} status=0 QTime=0
+2017-01-08 15:07:44.393 INFO  (qtp761960786-20) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1483888064347} status=0 QTime=1
+2017-01-08 15:07:44.420 INFO  (qtp761960786-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888064276} status=0 QTime=32
+2017-01-08 15:07:44.954 INFO  (qtp761960786-12) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888064275} status=0 QTime=0
+2017-01-08 15:07:44.964 INFO  (qtp761960786-19) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/replication params={wt=json&command=details&_=1483888064933} status=0 QTime=0
+2017-01-08 15:07:44.971 INFO  (qtp761960786-21) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1483888064347} status=0 QTime=12
+2017-01-08 15:07:44.972 INFO  (qtp761960786-13) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1483888064276&ts=1483888064276} status=503 QTime=0
+2017-01-08 15:07:44.996 INFO  (qtp761960786-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888064276} status=0 QTime=37
+2017-01-08 15:07:45.003 INFO  (qtp761960786-19) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/system params={wt=json&_=1483888064933} status=0 QTime=34
+2017-01-08 15:07:46.010 INFO  (qtp761960786-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888065907} status=0 QTime=0
+2017-01-08 15:07:46.024 INFO  (qtp761960786-12) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/replication params={wt=json&command=details&_=1483888065990} status=0 QTime=0
+2017-01-08 15:07:46.026 INFO  (qtp761960786-16) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1483888065989} status=0 QTime=3
+2017-01-08 15:07:46.034 INFO  (qtp761960786-21) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1483888065907&ts=1483888065907} status=503 QTime=0
+2017-01-08 15:07:46.039 INFO  (qtp761960786-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888065907} status=0 QTime=26
+2017-01-08 15:07:46.048 INFO  (qtp761960786-15) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/system params={wt=json&_=1483888065990} status=0 QTime=24
+2017-01-08 15:07:46.835 INFO  (qtp761960786-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888066727} status=0 QTime=0
+2017-01-08 15:07:46.852 INFO  (qtp761960786-16) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1483888066821} status=0 QTime=4
+2017-01-08 15:07:46.862 INFO  (qtp761960786-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888066727} status=0 QTime=20
+2017-01-08 15:07:46.862 INFO  (qtp761960786-12) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/replication params={wt=json&command=details&_=1483888066822} status=0 QTime=0
+2017-01-08 15:07:46.881 INFO  (qtp761960786-15) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1483888066727&ts=1483888066727} status=503 QTime=0
+2017-01-08 15:07:46.891 INFO  (qtp761960786-13) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/system params={wt=json&_=1483888066821} status=0 QTime=23
+2017-01-08 15:07:47.534 INFO  (commitScheduler-10-thread-1) [   x:core0] o.a.s.u.DirectUpdateHandler2 start commit{,optimize=false,openSearcher=false,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+2017-01-08 15:07:47.535 INFO  (commitScheduler-10-thread-1) [   x:core0] o.a.s.u.SolrIndexWriter Calling setCommitData with IW:org.apache.solr.update.SolrIndexWriter@341ac4bc
+2017-01-08 15:07:47.657 INFO  (commitScheduler-10-thread-1) [   x:core0] o.a.s.s.SolrIndexSearcher Opening [Searcher@1628ea2[core0] realtime]
+2017-01-08 15:07:47.659 INFO  (commitScheduler-10-thread-1) [   x:core0] o.a.s.u.DirectUpdateHandler2 end_commit_flush
+2017-01-08 15:07:48.828 INFO  (qtp761960786-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888066727} status=0 QTime=0
+2017-01-08 15:07:48.837 WARN  (qtp761960786-20) [   x:core0] o.a.s.h.a.LukeRequestHandler Error getting file length for [segments_4]
+java.nio.file.NoSuchFileException: /Users/user/solr-6.3.0/server/solr/core0/data/index/segments_4
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:86)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:144)
+	at java.nio.file.Files.readAttributes(Files.java:1737)
+	at java.nio.file.Files.size(Files.java:2332)
+	at org.apache.lucene.store.FSDirectory.fileLength(FSDirectory.java:243)
+	at org.apache.lucene.store.NRTCachingDirectory.fileLength(NRTCachingDirectory.java:128)
+	at org.apache.solr.handler.admin.LukeRequestHandler.getFileLength(LukeRequestHandler.java:598)
+	at org.apache.solr.handler.admin.LukeRequestHandler.getIndexInfo(LukeRequestHandler.java:586)
+	at org.apache.solr.handler.admin.LukeRequestHandler.handleRequestBody(LukeRequestHandler.java:137)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:153)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2213)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:654)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:460)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:303)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:254)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1668)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:581)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1160)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:511)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1092)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:518)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:308)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:244)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceAndRun(ExecuteProduceConsume.java:246)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:156)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:654)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:745)
+2017-01-08 15:07:48.839 INFO  (qtp761960786-20) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1483888066821} status=0 QTime=7
+2017-01-08 15:07:48.841 INFO  (qtp761960786-19) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/config params={wt=json&_=1483888068794} status=0 QTime=3
+2017-01-08 15:07:48.855 INFO  (qtp761960786-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888066727} status=0 QTime=26
+2017-01-08 15:07:48.918 WARN  (qtp761960786-14) [   x:core0] o.a.s.h.a.LukeRequestHandler Error getting file length for [segments_4]
+java.nio.file.NoSuchFileException: /Users/user/solr-6.3.0/server/solr/core0/data/index/segments_4
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:86)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:144)
+	at java.nio.file.Files.readAttributes(Files.java:1737)
+	at java.nio.file.Files.size(Files.java:2332)
+	at org.apache.lucene.store.FSDirectory.fileLength(FSDirectory.java:243)
+	at org.apache.lucene.store.NRTCachingDirectory.fileLength(NRTCachingDirectory.java:128)
+	at org.apache.solr.handler.admin.LukeRequestHandler.getFileLength(LukeRequestHandler.java:598)
+	at org.apache.solr.handler.admin.LukeRequestHandler.getIndexInfo(LukeRequestHandler.java:586)
+	at org.apache.solr.handler.admin.LukeRequestHandler.handleRequestBody(LukeRequestHandler.java:137)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:153)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2213)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:654)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:460)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:303)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:254)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1668)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:581)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1160)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:511)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1092)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:518)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:308)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:244)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceAndRun(ExecuteProduceConsume.java:246)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:156)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:654)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:745)
+2017-01-08 15:07:48.919 INFO  (qtp761960786-14) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1483888066821} status=0 QTime=2
+2017-01-08 15:07:50.852 INFO  (qtp761960786-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888066727} status=0 QTime=0
+2017-01-08 15:07:50.864 INFO  (qtp761960786-13) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/mbeans params={cat=QUERYHANDLER&wt=json&_=1483888070832} status=0 QTime=0
+2017-01-08 15:07:50.892 INFO  (qtp761960786-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888066727} status=0 QTime=32
+2017-01-08 15:07:50.916 INFO  (qtp761960786-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888066727} status=0 QTime=0
+2017-01-08 15:07:50.932 INFO  (qtp761960786-20) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/mbeans params={cat=QUERYHANDLER&wt=json&_=1483888070832} status=0 QTime=0
+2017-01-08 15:07:50.943 INFO  (qtp761960786-21) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=show-config&_=1483888070833} status=0 QTime=0
+2017-01-08 15:07:50.949 INFO  (qtp761960786-12) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888066727} status=0 QTime=25
+2017-01-08 15:07:50.975 INFO  (qtp761960786-19) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1483888070833} status=0 QTime=0
+2017-01-08 15:08:02.081 INFO  (qtp761960786-18) [   x:core0] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2017-01-08 15:08:02.085 INFO  (qtp761960786-18) [   x:core0] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2017-01-08 15:08:02.085 INFO  (qtp761960786-18) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=reload-config&_=1483888070833} status=0 QTime=4
+2017-01-08 15:08:02.097 INFO  (qtp761960786-13) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/mbeans params={cat=QUERYHANDLER&wt=json&_=1483888070832} status=0 QTime=0
+2017-01-08 15:08:02.098 INFO  (qtp761960786-14) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=show-config&_=1483888070833} status=0 QTime=0
+2017-01-08 15:08:02.108 INFO  (qtp761960786-15) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1483888070833} status=0 QTime=0
+2017-01-08 15:08:02.637 INFO  (qtp761960786-20) [   x:core0] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2017-01-08 15:08:02.641 INFO  (qtp761960786-20) [   x:core0] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2017-01-08 15:08:02.642 INFO  (qtp761960786-20) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=reload-config&_=1483888070833} status=0 QTime=4
+2017-01-08 15:08:02.653 INFO  (qtp761960786-21) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/mbeans params={cat=QUERYHANDLER&wt=json&_=1483888070832} status=0 QTime=0
+2017-01-08 15:08:02.660 INFO  (qtp761960786-12) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=show-config&_=1483888070833} status=0 QTime=0
+2017-01-08 15:08:02.668 INFO  (qtp761960786-19) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1483888070833} status=0 QTime=0
+2017-01-08 15:08:02.808 INFO  (qtp761960786-18) [   x:core0] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2017-01-08 15:08:02.811 INFO  (qtp761960786-18) [   x:core0] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2017-01-08 15:08:02.811 INFO  (qtp761960786-18) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=reload-config&_=1483888070833} status=0 QTime=3
+2017-01-08 15:08:02.821 INFO  (qtp761960786-16) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/mbeans params={cat=QUERYHANDLER&wt=json&_=1483888070832} status=0 QTime=0
+2017-01-08 15:08:02.821 INFO  (qtp761960786-13) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=show-config&_=1483888070833} status=0 QTime=0
+2017-01-08 15:08:02.831 INFO  (qtp761960786-14) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1483888070833} status=0 QTime=0
+2017-01-08 15:08:02.984 INFO  (qtp761960786-20) [   x:core0] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2017-01-08 15:08:02.987 INFO  (qtp761960786-20) [   x:core0] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2017-01-08 15:08:02.987 INFO  (qtp761960786-20) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=reload-config&_=1483888070833} status=0 QTime=2
+2017-01-08 15:08:02.996 INFO  (qtp761960786-21) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/mbeans params={cat=QUERYHANDLER&wt=json&_=1483888070832} status=0 QTime=0
+2017-01-08 15:08:02.997 INFO  (qtp761960786-15) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=show-config&_=1483888070833} status=0 QTime=0
+2017-01-08 15:08:03.006 INFO  (qtp761960786-19) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1483888070833} status=0 QTime=0
+2017-01-08 15:08:03.144 INFO  (qtp761960786-18) [   x:core0] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2017-01-08 15:08:03.147 INFO  (qtp761960786-18) [   x:core0] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2017-01-08 15:08:03.148 INFO  (qtp761960786-18) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=reload-config&_=1483888070833} status=0 QTime=3
+2017-01-08 15:08:03.158 INFO  (qtp761960786-13) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/mbeans params={cat=QUERYHANDLER&wt=json&_=1483888070832} status=0 QTime=0
+2017-01-08 15:08:03.159 INFO  (qtp761960786-12) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=show-config&_=1483888070833} status=0 QTime=0
+2017-01-08 15:08:03.173 INFO  (qtp761960786-13) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1483888070833} status=0 QTime=0
+2017-01-08 15:08:03.305 INFO  (qtp761960786-20) [   x:core0] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2017-01-08 15:08:03.308 INFO  (qtp761960786-20) [   x:core0] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2017-01-08 15:08:03.308 INFO  (qtp761960786-20) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=reload-config&_=1483888070833} status=0 QTime=3
+2017-01-08 15:08:03.318 INFO  (qtp761960786-21) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/mbeans params={cat=QUERYHANDLER&wt=json&_=1483888070832} status=0 QTime=0
+2017-01-08 15:08:03.319 INFO  (qtp761960786-16) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=show-config&_=1483888070833} status=0 QTime=0
+2017-01-08 15:08:03.325 INFO  (qtp761960786-15) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1483888070833} status=0 QTime=0
+2017-01-08 15:08:04.220 INFO  (qtp761960786-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888066727} status=0 QTime=0
+2017-01-08 15:08:04.235 WARN  (qtp761960786-19) [   x:core0] o.a.s.h.a.LukeRequestHandler Error getting file length for [segments_4]
+java.nio.file.NoSuchFileException: /Users/user/solr-6.3.0/server/solr/core0/data/index/segments_4
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:86)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:144)
+	at java.nio.file.Files.readAttributes(Files.java:1737)
+	at java.nio.file.Files.size(Files.java:2332)
+	at org.apache.lucene.store.FSDirectory.fileLength(FSDirectory.java:243)
+	at org.apache.lucene.store.NRTCachingDirectory.fileLength(NRTCachingDirectory.java:128)
+	at org.apache.solr.handler.admin.LukeRequestHandler.getFileLength(LukeRequestHandler.java:598)
+	at org.apache.solr.handler.admin.LukeRequestHandler.getIndexInfo(LukeRequestHandler.java:586)
+	at org.apache.solr.handler.admin.LukeRequestHandler.handleRequestBody(LukeRequestHandler.java:137)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:153)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2213)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:654)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:460)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:303)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:254)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1668)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:581)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1160)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:511)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1092)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:518)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:308)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:244)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceAndRun(ExecuteProduceConsume.java:246)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:156)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:654)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:745)
+2017-01-08 15:08:04.236 INFO  (qtp761960786-19) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1483888066821} status=0 QTime=11
+2017-01-08 15:08:04.249 INFO  (qtp761960786-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888066727} status=0 QTime=25
+2017-01-08 15:08:04.300 INFO  (qtp761960786-13) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/replication params={wt=json&command=details&_=1483888066822} status=0 QTime=0
+2017-01-08 15:08:04.302 INFO  (qtp761960786-13) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1483888066727&ts=1483888066727} status=503 QTime=0
+2017-01-08 15:08:04.327 INFO  (qtp761960786-12) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/system params={wt=json&_=1483888066821} status=0 QTime=24
+2017-01-08 15:08:07.139 INFO  (qtp761960786-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888066727} status=0 QTime=0
+2017-01-08 15:08:07.155 WARN  (qtp761960786-16) [   ] o.a.s.h.a.LukeRequestHandler Error getting file length for [segments_4]
+java.nio.file.NoSuchFileException: /Users/user/solr-6.3.0/server/solr/core0/data/index/segments_4
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:86)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:144)
+	at java.nio.file.Files.readAttributes(Files.java:1737)
+	at java.nio.file.Files.size(Files.java:2332)
+	at org.apache.lucene.store.FSDirectory.fileLength(FSDirectory.java:243)
+	at org.apache.lucene.store.NRTCachingDirectory.fileLength(NRTCachingDirectory.java:128)
+	at org.apache.solr.handler.admin.LukeRequestHandler.getFileLength(LukeRequestHandler.java:598)
+	at org.apache.solr.handler.admin.LukeRequestHandler.getIndexInfo(LukeRequestHandler.java:586)
+	at org.apache.solr.handler.admin.CoreAdminOperation.getCoreStatus(CoreAdminOperation.java:342)
+	at org.apache.solr.handler.admin.StatusOp.execute(StatusOp.java:48)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:377)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:365)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:156)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:153)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:660)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:441)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:303)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:254)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1668)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:581)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1160)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:511)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1092)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:518)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:308)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:244)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceAndRun(ExecuteProduceConsume.java:246)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:156)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:654)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:745)
+2017-01-08 15:08:07.158 INFO  (qtp761960786-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1483888066727} status=0 QTime=16
+2017-01-08 15:08:07.171 INFO  (qtp761960786-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888066727} status=0 QTime=32
+2017-01-08 15:08:07.222 INFO  (qtp761960786-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888066727} status=0 QTime=0
+2017-01-08 15:08:07.235 WARN  (qtp761960786-14) [   ] o.a.s.h.a.LukeRequestHandler Error getting file length for [segments_4]
+java.nio.file.NoSuchFileException: /Users/user/solr-6.3.0/server/solr/core0/data/index/segments_4
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:86)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:144)
+	at java.nio.file.Files.readAttributes(Files.java:1737)
+	at java.nio.file.Files.size(Files.java:2332)
+	at org.apache.lucene.store.FSDirectory.fileLength(FSDirectory.java:243)
+	at org.apache.lucene.store.NRTCachingDirectory.fileLength(NRTCachingDirectory.java:128)
+	at org.apache.solr.handler.admin.LukeRequestHandler.getFileLength(LukeRequestHandler.java:598)
+	at org.apache.solr.handler.admin.LukeRequestHandler.getIndexInfo(LukeRequestHandler.java:586)
+	at org.apache.solr.handler.admin.CoreAdminOperation.getCoreStatus(CoreAdminOperation.java:342)
+	at org.apache.solr.handler.admin.StatusOp.execute(StatusOp.java:48)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:377)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:365)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:156)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:153)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:660)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:441)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:303)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:254)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1668)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:581)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1160)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:511)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1092)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:518)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:308)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:244)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceAndRun(ExecuteProduceConsume.java:246)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:156)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:654)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:745)
+2017-01-08 15:08:07.236 INFO  (qtp761960786-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1483888066727} status=0 QTime=8
+2017-01-08 15:08:07.248 INFO  (qtp761960786-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888066727} status=0 QTime=23
+2017-01-08 15:08:12.659 INFO  (qtp761960786-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888066727} status=0 QTime=0
+2017-01-08 15:08:12.669 INFO  (qtp761960786-12) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/replication params={wt=json&command=details&_=1483888066822} status=0 QTime=0
+2017-01-08 15:08:12.676 INFO  (qtp761960786-16) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1483888066727&ts=1483888066727} status=503 QTime=0
+2017-01-08 15:08:12.681 WARN  (qtp761960786-20) [   x:core0] o.a.s.h.a.LukeRequestHandler Error getting file length for [segments_4]
+java.nio.file.NoSuchFileException: /Users/user/solr-6.3.0/server/solr/core0/data/index/segments_4
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:86)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:144)
+	at java.nio.file.Files.readAttributes(Files.java:1737)
+	at java.nio.file.Files.size(Files.java:2332)
+	at org.apache.lucene.store.FSDirectory.fileLength(FSDirectory.java:243)
+	at org.apache.lucene.store.NRTCachingDirectory.fileLength(NRTCachingDirectory.java:128)
+	at org.apache.solr.handler.admin.LukeRequestHandler.getFileLength(LukeRequestHandler.java:598)
+	at org.apache.solr.handler.admin.LukeRequestHandler.getIndexInfo(LukeRequestHandler.java:586)
+	at org.apache.solr.handler.admin.LukeRequestHandler.handleRequestBody(LukeRequestHandler.java:137)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:153)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2213)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:654)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:460)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:303)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:254)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1668)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:581)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1160)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:511)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1092)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:518)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:308)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:244)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceAndRun(ExecuteProduceConsume.java:246)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:156)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:654)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:745)
+2017-01-08 15:08:12.682 INFO  (qtp761960786-20) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1483888066821} status=0 QTime=17
+2017-01-08 15:08:12.696 INFO  (qtp761960786-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888066727} status=0 QTime=34
+2017-01-08 15:08:12.702 INFO  (qtp761960786-13) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/system params={wt=json&_=1483888066821} status=0 QTime=28
+2017-01-08 15:08:15.409 INFO  (qtp761960786-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888095274} status=0 QTime=0
+2017-01-08 15:08:15.420 INFO  (qtp761960786-16) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/replication params={wt=json&command=details&_=1483888095392} status=0 QTime=0
+2017-01-08 15:08:15.425 WARN  (qtp761960786-14) [   x:core0] o.a.s.h.a.LukeRequestHandler Error getting file length for [segments_4]
+java.nio.file.NoSuchFileException: /Users/user/solr-6.3.0/server/solr/core0/data/index/segments_4
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:86)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:144)
+	at java.nio.file.Files.readAttributes(Files.java:1737)
+	at java.nio.file.Files.size(Files.java:2332)
+	at org.apache.lucene.store.FSDirectory.fileLength(FSDirectory.java:243)
+	at org.apache.lucene.store.NRTCachingDirectory.fileLength(NRTCachingDirectory.java:128)
+	at org.apache.solr.handler.admin.LukeRequestHandler.getFileLength(LukeRequestHandler.java:598)
+	at org.apache.solr.handler.admin.LukeRequestHandler.getIndexInfo(LukeRequestHandler.java:586)
+	at org.apache.solr.handler.admin.LukeRequestHandler.handleRequestBody(LukeRequestHandler.java:137)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:153)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2213)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:654)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:460)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:303)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:254)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1668)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:581)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1160)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:511)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1092)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:518)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:308)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:244)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceAndRun(ExecuteProduceConsume.java:246)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:156)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:654)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:745)
+2017-01-08 15:08:15.426 INFO  (qtp761960786-14) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1483888095391} status=0 QTime=9
+2017-01-08 15:08:15.429 INFO  (qtp761960786-13) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1483888095276&ts=1483888095276} status=503 QTime=0
+2017-01-08 15:08:15.436 INFO  (qtp761960786-12) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888095275} status=0 QTime=22
+2017-01-08 15:08:15.438 INFO  (qtp761960786-21) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/system params={wt=json&_=1483888095391} status=0 QTime=17
+2017-01-08 15:08:19.306 INFO  (qtp761960786-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888095274} status=0 QTime=0
+2017-01-08 15:08:19.311 WARN  (qtp761960786-15) [   ] o.a.s.h.a.LukeRequestHandler Error getting file length for [segments_4]
+java.nio.file.NoSuchFileException: /Users/user/solr-6.3.0/server/solr/core0/data/index/segments_4
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:86)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:144)
+	at java.nio.file.Files.readAttributes(Files.java:1737)
+	at java.nio.file.Files.size(Files.java:2332)
+	at org.apache.lucene.store.FSDirectory.fileLength(FSDirectory.java:243)
+	at org.apache.lucene.store.NRTCachingDirectory.fileLength(NRTCachingDirectory.java:128)
+	at org.apache.solr.handler.admin.LukeRequestHandler.getFileLength(LukeRequestHandler.java:598)
+	at org.apache.solr.handler.admin.LukeRequestHandler.getIndexInfo(LukeRequestHandler.java:586)
+	at org.apache.solr.handler.admin.CoreAdminOperation.getCoreStatus(CoreAdminOperation.java:342)
+	at org.apache.solr.handler.admin.StatusOp.execute(StatusOp.java:48)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:377)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:365)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:156)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:153)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:660)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:441)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:303)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:254)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1668)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:581)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1160)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:511)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1092)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:518)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:308)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:244)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceAndRun(ExecuteProduceConsume.java:246)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:156)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:654)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:745)
+2017-01-08 15:08:19.312 INFO  (qtp761960786-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1483888095274} status=0 QTime=5
+2017-01-08 15:08:19.330 INFO  (qtp761960786-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888095275} status=0 QTime=23
+2017-01-08 15:08:19.380 INFO  (qtp761960786-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888095274} status=0 QTime=0
+2017-01-08 15:08:19.383 WARN  (qtp761960786-12) [   ] o.a.s.h.a.LukeRequestHandler Error getting file length for [segments_4]
+java.nio.file.NoSuchFileException: /Users/user/solr-6.3.0/server/solr/core0/data/index/segments_4
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:86)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:144)
+	at java.nio.file.Files.readAttributes(Files.java:1737)
+	at java.nio.file.Files.size(Files.java:2332)
+	at org.apache.lucene.store.FSDirectory.fileLength(FSDirectory.java:243)
+	at org.apache.lucene.store.NRTCachingDirectory.fileLength(NRTCachingDirectory.java:128)
+	at org.apache.solr.handler.admin.LukeRequestHandler.getFileLength(LukeRequestHandler.java:598)
+	at org.apache.solr.handler.admin.LukeRequestHandler.getIndexInfo(LukeRequestHandler.java:586)
+	at org.apache.solr.handler.admin.CoreAdminOperation.getCoreStatus(CoreAdminOperation.java:342)
+	at org.apache.solr.handler.admin.StatusOp.execute(StatusOp.java:48)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:377)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:365)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:156)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:153)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:660)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:441)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:303)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:254)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1668)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:581)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1160)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:511)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1092)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:518)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:308)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:244)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceAndRun(ExecuteProduceConsume.java:246)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:156)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:654)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:745)
+2017-01-08 15:08:19.384 INFO  (qtp761960786-12) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1483888095274} status=0 QTime=3
+2017-01-08 15:08:19.393 INFO  (qtp761960786-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888095275} status=0 QTime=13
+2017-01-08 15:08:20.817 INFO  (qtp761960786-21) [   ] o.a.s.c.SolrResourceLoader [core0] Added 46 libs to classloader, from paths: [/Users/user/solr-6.3.0/contrib/extraction/lib, /Users/user/solr-6.3.0/contrib/langid/lib, /Users/user/solr-6.3.0/contrib/velocity/lib, /Users/user/solr-6.3.0/dist]
+2017-01-08 15:08:20.911 INFO  (qtp761960786-21) [   ] o.a.s.u.SolrIndexConfig IndexWriter infoStream solr logging is enabled
+2017-01-08 15:08:20.913 INFO  (qtp761960786-21) [   ] o.a.s.c.SolrConfig Using Lucene MatchVersion: 6.3.0
+2017-01-08 15:08:20.950 INFO  (qtp761960786-21) [   ] o.a.s.s.IndexSchema [core0] Schema name=eol_candidates_schema
+2017-01-08 15:08:21.134 INFO  (qtp761960786-21) [   ] o.a.s.s.IndexSchema Loaded schema eol_candidates_schema/1.6 with uniqueid field cb_id
+2017-01-08 15:08:21.166 INFO  (qtp761960786-21) [   ] o.a.s.c.CoreContainer Reloading SolrCore 'core0' using configuration from instancedir /Users/user/solr-6.3.0/server/solr/core0
+2017-01-08 15:08:21.174 INFO  (qtp761960786-21) [   x:core0] o.a.s.c.SolrCore [[core0] ] Opening new SolrCore at [/Users/user/solr-6.3.0/server/solr/core0], dataDir=[/Users/user/solr-6.3.0/server/solr/core0/data/]
+2017-01-08 15:08:21.176 INFO  (qtp761960786-21) [   x:core0] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2017-01-08 15:08:21.483 INFO  (qtp761960786-21) [   x:core0] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2017-01-08 15:08:21.483 INFO  (qtp761960786-21) [   x:core0] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2017-01-08 15:08:21.485 INFO  (qtp761960786-21) [   x:core0] o.a.s.s.SolrIndexSearcher Opening [Searcher@4813f0d0[core0] main]
+2017-01-08 15:08:21.486 INFO  (qtp761960786-21) [   x:core0] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /Users/user/solr-6.3.0/server/solr/core0/conf
+2017-01-08 15:08:21.487 INFO  (qtp761960786-21) [   x:core0] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-01-08 15:08:21.487 INFO  (qtp761960786-21) [   x:core0] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2017-01-08 15:08:21.488 INFO  (qtp761960786-21) [   x:core0] o.a.s.h.c.SuggestComponent Initializing SuggestComponent
+2017-01-08 15:08:21.488 INFO  (qtp761960786-21) [   x:core0] o.a.s.s.s.SolrSuggester init: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string}
+2017-01-08 15:08:21.488 INFO  (qtp761960786-21) [   x:core0] o.a.s.s.s.SolrSuggester Dictionary loaded with params: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string}
+2017-01-08 15:08:21.488 INFO  (qtp761960786-21) [   x:core0] o.a.s.h.c.SuggestComponent Registering searcher listener for suggester: mySuggester - SuggesterListener [core=org.apache.solr.core.SolrCore@7b0c05c3, suggester=SolrSuggester [ name=mySuggester, sourceLocation=null, storeDir=, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, sizeInBytes=0 ], buildOnCommit=false, buildOnOptimize=false, buildOnStartup=true, isCoreReload=true]
+2017-01-08 15:08:21.488 INFO  (qtp761960786-21) [   x:core0] o.a.s.h.c.QueryElevationComponent Loading QueryElevation from: /Users/user/solr-6.3.0/server/solr/core0/conf/elevate.xml
+2017-01-08 15:08:21.492 INFO  (qtp761960786-21) [   x:core0] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2017-01-08 15:08:21.497 INFO  (searcherExecutor-12-thread-1-processing-x:core0) [   x:core0] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@4813f0d0[core0] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.3.0):C347)))}
+2017-01-08 15:08:21.525 INFO  (searcherExecutor-12-thread-1-processing-x:core0) [   x:core0] o.a.s.c.S.Request [core0]  webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=19 status=0 QTime=26
+2017-01-08 15:08:21.533 INFO  (qtp761960786-21) [   x:core0] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2017-01-08 15:08:21.533 WARN  (qtp761960786-21) [   x:core0] o.a.s.c.SolrCore [core0] PERFORMANCE WARNING: Overlapping onDeckSearchers=2
+2017-01-08 15:08:21.537 INFO  (searcherExecutor-12-thread-1-processing-x:core0) [   x:core0] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-01-08 15:08:21.537 INFO  (searcherExecutor-12-thread-1-processing-x:core0) [   x:core0] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2017-01-08 15:08:21.537 INFO  (searcherExecutor-12-thread-1-processing-x:core0) [   x:core0] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: wordbreak
+2017-01-08 15:08:21.537 INFO  (searcherExecutor-12-thread-1-processing-x:core0) [   x:core0] o.a.s.h.c.SuggestComponent Skipping first newSearcher call for suggester SolrSuggester [ name=mySuggester, sourceLocation=null, storeDir=, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, sizeInBytes=0 ] in core reload
+2017-01-08 15:08:21.538 INFO  (searcherExecutor-12-thread-1-processing-x:core0) [   x:core0] o.a.s.c.SolrCore [core0] Registered new searcher Searcher@4813f0d0[core0] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.3.0):C347)))}
+2017-01-08 15:08:21.541 INFO  (qtp761960786-21) [   x:core0] o.a.s.s.SolrIndexSearcher Opening [Searcher@359a959b[core0] main]
+2017-01-08 15:08:21.543 INFO  (qtp761960786-21) [   x:core0] o.a.s.c.SolrCore [core0]  CLOSING SolrCore org.apache.solr.core.SolrCore@2d64ff3b
+2017-01-08 15:08:21.545 INFO  (searcherExecutor-12-thread-1-processing-x:core0) [   x:core0] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@359a959b[core0] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.3.0):C347)))}
+2017-01-08 15:08:21.545 INFO  (searcherExecutor-12-thread-1-processing-x:core0) [   x:core0] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-01-08 15:08:21.545 INFO  (searcherExecutor-12-thread-1-processing-x:core0) [   x:core0] o.a.s.h.c.SuggestComponent buildOnStartup: mySuggester
+2017-01-08 15:08:21.545 INFO  (searcherExecutor-12-thread-1-processing-x:core0) [   x:core0] o.a.s.s.s.SolrSuggester SolrSuggester.build(mySuggester)
+2017-01-08 15:08:21.546 INFO  (qtp761960786-21) [   x:core0] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={core=core0&action=RELOAD&wt=json&_=1483888095274} status=0 QTime=753
+2017-01-08 15:08:21.582 INFO  (searcherExecutor-12-thread-1-processing-x:core0) [   x:core0] o.a.s.c.SolrCore [core0] Registered new searcher Searcher@359a959b[core0] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.3.0):C347)))}
+2017-01-08 15:08:22.574 INFO  (qtp761960786-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888095274} status=0 QTime=0
+2017-01-08 15:08:22.578 INFO  (qtp761960786-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1483888095274} status=0 QTime=2
+2017-01-08 15:08:22.610 INFO  (qtp761960786-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888095275} status=0 QTime=36
+2017-01-08 15:08:22.956 INFO  (qtp761960786-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888095274} status=0 QTime=0
+2017-01-08 15:08:22.967 INFO  (qtp761960786-20) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1483888095391} status=0 QTime=0
+2017-01-08 15:08:22.971 INFO  (qtp761960786-18) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/replication params={wt=json&command=details&_=1483888095392} status=0 QTime=0
+2017-01-08 15:08:22.978 INFO  (qtp761960786-14) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1483888095276&ts=1483888095276} status=503 QTime=0
+2017-01-08 15:08:22.987 INFO  (qtp761960786-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888095275} status=0 QTime=28
+2017-01-08 15:08:22.995 INFO  (qtp761960786-21) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/system params={wt=json&_=1483888095391} status=0 QTime=18
+2017-01-08 15:08:25.720 INFO  (qtp761960786-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888105613} status=0 QTime=0
+2017-01-08 15:08:25.728 INFO  (qtp761960786-14) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1483888105705} status=0 QTime=0
+2017-01-08 15:08:25.733 INFO  (qtp761960786-16) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/replication params={wt=json&command=details&_=1483888105706} status=0 QTime=0
+2017-01-08 15:08:25.737 INFO  (qtp761960786-19) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1483888105614&ts=1483888105614} status=503 QTime=0
+2017-01-08 15:08:25.741 INFO  (qtp761960786-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888105614} status=0 QTime=18
+2017-01-08 15:08:25.753 INFO  (qtp761960786-21) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/system params={wt=json&_=1483888105705} status=0 QTime=17
+2017-01-08 15:08:26.615 INFO  (qtp761960786-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888105613} status=0 QTime=0
+2017-01-08 15:08:26.622 INFO  (qtp761960786-18) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1483888105705} status=0 QTime=0
+2017-01-08 15:08:26.643 INFO  (qtp761960786-12) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888105614} status=0 QTime=25
+2017-01-08 15:08:27.913 INFO  (qtp761960786-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888105613} status=0 QTime=0
+2017-01-08 15:08:27.921 INFO  (qtp761960786-15) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/file params={wt=json&_=1483888107902} status=0 QTime=2
+2017-01-08 15:08:27.939 INFO  (qtp761960786-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888105614} status=0 QTime=23
+2017-01-08 15:08:27.955 INFO  (qtp761960786-20) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/file params={file=clustering&wt=json&_=1483888107902} status=0 QTime=0
+2017-01-08 15:08:27.960 INFO  (qtp761960786-19) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/file params={file=lang&wt=json&_=1483888107902} status=0 QTime=5
+2017-01-08 15:08:27.961 INFO  (qtp761960786-20) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/file params={file=xslt&wt=json&_=1483888107902} status=0 QTime=0
+2017-01-08 15:08:27.995 INFO  (qtp761960786-12) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/file params={file=clustering/carrot2&wt=json&_=1483888107902} status=0 QTime=0
+2017-01-08 15:08:28.753 INFO  (qtp761960786-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888105613} status=0 QTime=0
+2017-01-08 15:08:28.766 INFO  (qtp761960786-14) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1483888105705} status=0 QTime=0
+2017-01-08 15:08:28.795 INFO  (qtp761960786-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888105614} status=0 QTime=36
+2017-01-08 15:08:29.356 INFO  (qtp761960786-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888105613} status=0 QTime=0
+2017-01-08 15:08:29.366 INFO  (qtp761960786-21) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1483888105705} status=0 QTime=1
+2017-01-08 15:08:29.393 INFO  (qtp761960786-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888105614} status=0 QTime=33
+2017-01-08 15:08:30.598 INFO  (qtp761960786-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888105613} status=0 QTime=0
+2017-01-08 15:08:30.609 INFO  (qtp761960786-20) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1483888105705} status=0 QTime=2
+2017-01-08 15:08:30.628 INFO  (qtp761960786-12) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888105614} status=0 QTime=26
+2017-01-08 15:08:31.892 INFO  (qtp761960786-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888105613} status=0 QTime=0
+2017-01-08 15:08:31.894 INFO  (qtp761960786-13) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1483888105705} status=0 QTime=0
+2017-01-08 15:08:31.918 INFO  (qtp761960786-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888105614} status=0 QTime=25
+2017-01-08 15:08:32.571 INFO  (qtp761960786-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888105613} status=0 QTime=0
+2017-01-08 15:08:32.579 INFO  (qtp761960786-18) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1483888105705} status=0 QTime=0
+2017-01-08 15:08:32.585 INFO  (qtp761960786-16) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/replication params={wt=json&command=details&_=1483888105706} status=0 QTime=0
+2017-01-08 15:08:32.595 INFO  (qtp761960786-12) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1483888105614&ts=1483888105614} status=503 QTime=0
+2017-01-08 15:08:32.598 INFO  (qtp761960786-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888105614} status=0 QTime=26
+2017-01-08 15:08:32.609 INFO  (qtp761960786-18) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/system params={wt=json&_=1483888105705} status=0 QTime=22
+2017-01-08 15:08:36.327 INFO  (qtp761960786-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888105613} status=0 QTime=0
+2017-01-08 15:08:36.329 INFO  (qtp761960786-16) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/mbeans params={cat=QUERYHANDLER&wt=json&_=1483888116309} status=0 QTime=0
+2017-01-08 15:08:36.348 INFO  (qtp761960786-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888105614} status=0 QTime=21
+2017-01-08 15:08:36.381 INFO  (qtp761960786-15) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/mbeans params={cat=QUERYHANDLER&wt=json&_=1483888116309} status=0 QTime=0
+2017-01-08 15:08:36.382 INFO  (qtp761960786-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888105613} status=0 QTime=0
+2017-01-08 15:08:36.400 INFO  (qtp761960786-18) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=show-config&_=1483888116309} status=0 QTime=10
+2017-01-08 15:08:36.423 INFO  (qtp761960786-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888105614} status=0 QTime=40
+2017-01-08 15:08:36.426 INFO  (qtp761960786-12) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1483888116309} status=0 QTime=0
+2017-01-08 15:11:22.131 INFO  (qtp761960786-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888105613} status=0 QTime=0
+2017-01-08 15:11:22.137 INFO  (qtp761960786-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1483888105613} status=0 QTime=2
+2017-01-08 15:11:22.172 INFO  (qtp761960786-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888105614} status=0 QTime=41
+2017-01-08 15:11:22.228 INFO  (qtp761960786-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888105613} status=0 QTime=0
+2017-01-08 15:11:22.230 INFO  (qtp761960786-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1483888105613} status=0 QTime=0
+2017-01-08 15:11:22.251 INFO  (qtp761960786-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888105614} status=0 QTime=21
+2017-01-08 15:11:23.075 INFO  (qtp761960786-16) [   ] o.a.s.c.SolrResourceLoader [core0] Added 46 libs to classloader, from paths: [/Users/user/solr-6.3.0/contrib/extraction/lib, /Users/user/solr-6.3.0/contrib/langid/lib, /Users/user/solr-6.3.0/contrib/velocity/lib, /Users/user/solr-6.3.0/dist]
+2017-01-08 15:11:23.097 INFO  (qtp761960786-16) [   ] o.a.s.u.SolrIndexConfig IndexWriter infoStream solr logging is enabled
+2017-01-08 15:11:23.099 INFO  (qtp761960786-16) [   ] o.a.s.c.SolrConfig Using Lucene MatchVersion: 6.3.0
+2017-01-08 15:11:23.124 INFO  (qtp761960786-16) [   ] o.a.s.s.ManagedIndexSchemaFactory The schema is configured as managed, but managed schema resource managed-schema not found - loading non-managed schema schema.xml instead
+2017-01-08 15:11:23.134 ERROR (qtp761960786-16) [   ] o.a.s.c.Config Exception during parsing file: schema:org.xml.sax.SAXParseException; systemId: solrres:/schema.xml; lineNumber: 124; columnNumber: 10; 注释中不允许出现字符串 "--"。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1437)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.scanComment(XMLScanner.java:796)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanComment(XMLDocumentFragmentScannerImpl.java:1039)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2985)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:118)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.solr.core.Config.<init>(Config.java:143)
+	at org.apache.solr.core.Config.<init>(Config.java:90)
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:460)
+	at org.apache.solr.schema.IndexSchema.<init>(IndexSchema.java:183)
+	at org.apache.solr.schema.ManagedIndexSchema.<init>(ManagedIndexSchema.java:104)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:173)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:45)
+	at org.apache.solr.schema.IndexSchemaFactory.buildIndexSchema(IndexSchemaFactory.java:75)
+	at org.apache.solr.core.ConfigSetService.createIndexSchema(ConfigSetService.java:107)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:78)
+	at org.apache.solr.core.CoreContainer.reload(CoreContainer.java:942)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$2(CoreAdminOperation.java:112)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:377)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:365)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:156)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:153)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:660)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:441)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:303)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:254)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1668)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:581)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1160)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:511)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1092)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:518)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:308)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:244)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceAndRun(ExecuteProduceConsume.java:246)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:156)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:654)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-01-08 15:11:23.137 ERROR (qtp761960786-16) [   ] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error handling 'reload' action
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$2(CoreAdminOperation.java:114)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:377)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:365)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:156)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:153)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:660)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:441)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:303)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:254)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1668)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:581)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1160)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:511)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1092)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:518)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:308)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:244)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceAndRun(ExecuteProduceConsume.java:246)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:156)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:654)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.solr.common.SolrException: Unable to reload core [core0]
+	at org.apache.solr.core.CoreContainer.reload(CoreContainer.java:950)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$2(CoreAdminOperation.java:112)
+	... 32 more
+Caused by: org.apache.solr.common.SolrException: Could not load conf for core core0: Can't load schema /Users/user/solr-6.3.0/server/solr/core0/conf/schema.xml: org.xml.sax.SAXParseException; systemId: solrres:/schema.xml; lineNumber: 124; columnNumber: 10; 注释中不允许出现字符串 "--"。
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:85)
+	at org.apache.solr.core.CoreContainer.reload(CoreContainer.java:942)
+	... 33 more
+Caused by: org.apache.solr.common.SolrException: Can't load schema /Users/user/solr-6.3.0/server/solr/core0/conf/schema.xml: org.xml.sax.SAXParseException; systemId: solrres:/schema.xml; lineNumber: 124; columnNumber: 10; 注释中不允许出现字符串 "--"。
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:598)
+	at org.apache.solr.schema.IndexSchema.<init>(IndexSchema.java:183)
+	at org.apache.solr.schema.ManagedIndexSchema.<init>(ManagedIndexSchema.java:104)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:173)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:45)
+	at org.apache.solr.schema.IndexSchemaFactory.buildIndexSchema(IndexSchemaFactory.java:75)
+	at org.apache.solr.core.ConfigSetService.createIndexSchema(ConfigSetService.java:107)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:78)
+	... 34 more
+Caused by: org.apache.solr.common.SolrException: org.xml.sax.SAXParseException; systemId: solrres:/schema.xml; lineNumber: 124; columnNumber: 10; 注释中不允许出现字符串 "--"。
+	at org.apache.solr.core.Config.<init>(Config.java:154)
+	at org.apache.solr.core.Config.<init>(Config.java:90)
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:460)
+	... 41 more
+Caused by: org.xml.sax.SAXParseException; systemId: solrres:/schema.xml; lineNumber: 124; columnNumber: 10; 注释中不允许出现字符串 "--"。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1437)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.scanComment(XMLScanner.java:796)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanComment(XMLDocumentFragmentScannerImpl.java:1039)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2985)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:118)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.solr.core.Config.<init>(Config.java:143)
+	... 43 more
+
+2017-01-08 15:11:23.137 INFO  (qtp761960786-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={core=core0&action=RELOAD&wt=json&_=1483888105613} status=500 QTime=79
+2017-01-08 15:11:23.137 ERROR (qtp761960786-16) [   ] o.a.s.s.HttpSolrCall null:org.apache.solr.common.SolrException: Error handling 'reload' action
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$2(CoreAdminOperation.java:114)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:377)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:365)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:156)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:153)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:660)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:441)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:303)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:254)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1668)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:581)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1160)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:511)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1092)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:518)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:308)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:244)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceAndRun(ExecuteProduceConsume.java:246)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:156)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:654)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.solr.common.SolrException: Unable to reload core [core0]
+	at org.apache.solr.core.CoreContainer.reload(CoreContainer.java:950)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$2(CoreAdminOperation.java:112)
+	... 32 more
+Caused by: org.apache.solr.common.SolrException: Could not load conf for core core0: Can't load schema /Users/user/solr-6.3.0/server/solr/core0/conf/schema.xml: org.xml.sax.SAXParseException; systemId: solrres:/schema.xml; lineNumber: 124; columnNumber: 10; 注释中不允许出现字符串 "--"。
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:85)
+	at org.apache.solr.core.CoreContainer.reload(CoreContainer.java:942)
+	... 33 more
+Caused by: org.apache.solr.common.SolrException: Can't load schema /Users/user/solr-6.3.0/server/solr/core0/conf/schema.xml: org.xml.sax.SAXParseException; systemId: solrres:/schema.xml; lineNumber: 124; columnNumber: 10; 注释中不允许出现字符串 "--"。
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:598)
+	at org.apache.solr.schema.IndexSchema.<init>(IndexSchema.java:183)
+	at org.apache.solr.schema.ManagedIndexSchema.<init>(ManagedIndexSchema.java:104)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:173)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:45)
+	at org.apache.solr.schema.IndexSchemaFactory.buildIndexSchema(IndexSchemaFactory.java:75)
+	at org.apache.solr.core.ConfigSetService.createIndexSchema(ConfigSetService.java:107)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:78)
+	... 34 more
+Caused by: org.apache.solr.common.SolrException: org.xml.sax.SAXParseException; systemId: solrres:/schema.xml; lineNumber: 124; columnNumber: 10; 注释中不允许出现字符串 "--"。
+	at org.apache.solr.core.Config.<init>(Config.java:154)
+	at org.apache.solr.core.Config.<init>(Config.java:90)
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:460)
+	... 41 more
+Caused by: org.xml.sax.SAXParseException; systemId: solrres:/schema.xml; lineNumber: 124; columnNumber: 10; 注释中不允许出现字符串 "--"。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1437)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.scanComment(XMLScanner.java:796)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanComment(XMLDocumentFragmentScannerImpl.java:1039)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2985)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:118)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.solr.core.Config.<init>(Config.java:143)
+	... 43 more
+
+2017-01-08 15:11:24.169 INFO  (qtp761960786-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888105613} status=0 QTime=0
+2017-01-08 15:11:24.175 INFO  (qtp761960786-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1483888105613} status=0 QTime=1
+2017-01-08 15:11:24.194 INFO  (qtp761960786-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888105614} status=0 QTime=25
+2017-01-08 15:11:45.254 INFO  (qtp761960786-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888105613} status=0 QTime=0
+2017-01-08 15:11:45.264 INFO  (qtp761960786-12) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1483888105705} status=0 QTime=0
+2017-01-08 15:11:45.267 INFO  (qtp761960786-14) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/replication params={wt=json&command=details&_=1483888105706} status=0 QTime=1
+2017-01-08 15:11:45.278 INFO  (qtp761960786-12) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1483888105614&ts=1483888105614} status=503 QTime=0
+2017-01-08 15:11:45.291 INFO  (qtp761960786-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888105614} status=0 QTime=36
+2017-01-08 15:11:45.294 INFO  (qtp761960786-14) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/system params={wt=json&_=1483888105705} status=0 QTime=23
+2017-01-08 15:11:48.495 INFO  (qtp761960786-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888105613} status=0 QTime=0
+2017-01-08 15:11:48.505 INFO  (qtp761960786-18) [   x:core0] o.a.s.c.S.Request [core0]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1483888105705} status=0 QTime=1
+2017-01-08 15:11:48.523 INFO  (qtp761960786-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888105614} status=0 QTime=23
+2017-01-08 15:11:49.625 INFO  (qtp761960786-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888105613} status=0 QTime=0
+2017-01-08 15:11:49.634 INFO  (qtp761960786-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1483888105613} status=0 QTime=0
+2017-01-08 15:11:49.647 INFO  (qtp761960786-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888105614} status=0 QTime=18
+2017-01-08 15:11:49.685 INFO  (qtp761960786-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888105613} status=0 QTime=0
+2017-01-08 15:11:49.690 INFO  (qtp761960786-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1483888105613} status=0 QTime=0
+2017-01-08 15:11:49.708 INFO  (qtp761960786-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888105614} status=0 QTime=23
+2017-01-08 15:12:01.269 INFO  (qtp761960786-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888321099} status=0 QTime=0
+2017-01-08 15:12:01.272 INFO  (qtp761960786-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1483888321099} status=0 QTime=0
+2017-01-08 15:12:01.287 INFO  (qtp761960786-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888321101} status=0 QTime=17
+2017-01-08 15:12:03.343 INFO  (qtp761960786-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888323209} status=0 QTime=0
+2017-01-08 15:12:03.347 INFO  (qtp761960786-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1483888323209} status=0 QTime=0
+2017-01-08 15:12:03.369 INFO  (qtp761960786-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888323210} status=0 QTime=25
+2017-01-08 15:12:04.041 INFO  (qtp761960786-12) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888323209} status=0 QTime=0
+2017-01-08 15:12:04.045 INFO  (qtp761960786-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1483888323209} status=0 QTime=0
+2017-01-08 15:12:04.062 INFO  (qtp761960786-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888323210} status=0 QTime=21
+2017-01-08 15:12:04.128 INFO  (qtp761960786-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1483888323209} status=0 QTime=0
+2017-01-08 15:12:04.137 INFO  (qtp761960786-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1483888323209} status=0 QTime=1
+2017-01-08 15:12:04.162 INFO  (qtp761960786-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1483888323210} status=0 QTime=30
+2017-01-08 15:12:26.359 INFO  (ShutdownMonitor) [   ] o.e.j.s.ServerConnector Stopped ServerConnector@70325e14{HTTP/1.1,[http/1.1]}{0.0.0.0:8983}
+2017-01-08 15:12:26.359 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1653844940
+2017-01-08 15:12:26.361 INFO  (coreCloseExecutor-16-thread-1) [   x:core0] o.a.s.c.SolrCore [core0]  CLOSING SolrCore org.apache.solr.core.SolrCore@7b0c05c3
+2017-01-08 15:12:26.383 WARN  (ShutdownMonitor) [   ] o.e.j.s.ServletContextHandler ServletContextHandler.setHandler should not be called directly. Use insertHandler or setSessionHandler etc.

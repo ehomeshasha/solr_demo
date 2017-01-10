@@ -1,0 +1,152 @@
+2017-01-08 15:01:03.500 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.8.v20160314
+2017-01-08 15:01:03.770 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 6.3.0
+2017-01-08 15:01:03.770 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2017-01-08 15:01:03.770 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /Users/user/solr-6.3.0
+2017-01-08 15:01:03.832 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2017-01-08T15:01:03.771Z
+2017-01-08 15:01:03.833 INFO  (main) [   ] o.a.s.s.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2017-01-08 15:01:03.862 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: /Users/user/solr-6.3.0/server/solr
+2017-01-08 15:01:03.868 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /Users/user/solr-6.3.0/server/solr/solr.xml
+2017-01-08 15:01:04.109 INFO  (main) [   ] o.a.s.u.UpdateShardHandler Creating UpdateShardHandler HTTP client with params: socketTimeout=600000&connTimeout=60000&retry=true
+2017-01-08 15:01:04.544 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath /Users/user/solr-6.3.0/server/solr
+2017-01-08 15:01:04.550 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [core0]
+2017-01-08 15:01:04.680 INFO  (main) [   ] o.e.j.s.ServerConnector Started ServerConnector@3e94fa46{HTTP/1.1,[http/1.1]}{0.0.0.0:8983}
+2017-01-08 15:01:04.681 INFO  (main) [   ] o.e.j.s.Server Started @1725ms
+2017-01-08 15:01:04.701 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.SolrResourceLoader [core0] Added 46 libs to classloader, from paths: [/Users/user/solr-6.3.0/contrib/extraction/lib, /Users/user/solr-6.3.0/contrib/langid/lib, /Users/user/solr-6.3.0/contrib/velocity/lib, /Users/user/solr-6.3.0/dist]
+2017-01-08 15:01:04.968 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.u.SolrIndexConfig IndexWriter infoStream solr logging is enabled
+2017-01-08 15:01:04.975 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.SolrConfig Using Lucene MatchVersion: 6.3.0
+2017-01-08 15:01:05.266 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.s.ManagedIndexSchemaFactory The schema is configured as managed, but managed schema resource managed-schema not found - loading non-managed schema schema.xml instead
+2017-01-08 15:01:05.304 ERROR (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.Config Exception during parsing file: schema:org.xml.sax.SAXParseException; systemId: solrres:/schema.xml; lineNumber: 125; columnNumber: 9; 注释中不允许出现字符串 "--"。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1437)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.scanComment(XMLScanner.java:796)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanComment(XMLDocumentFragmentScannerImpl.java:1039)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2985)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:118)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.solr.core.Config.<init>(Config.java:143)
+	at org.apache.solr.core.Config.<init>(Config.java:90)
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:460)
+	at org.apache.solr.schema.IndexSchema.<init>(IndexSchema.java:183)
+	at org.apache.solr.schema.ManagedIndexSchema.<init>(ManagedIndexSchema.java:104)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:173)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:45)
+	at org.apache.solr.schema.IndexSchemaFactory.buildIndexSchema(IndexSchemaFactory.java:75)
+	at org.apache.solr.core.ConfigSetService.createIndexSchema(ConfigSetService.java:107)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:78)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:840)
+	at org.apache.solr.core.CoreContainer.lambda$load$0(CoreContainer.java:498)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:229)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-01-08 15:01:05.306 ERROR (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.CoreContainer Error creating core [core0]: Could not load conf for core core0: Can't load schema /Users/user/solr-6.3.0/server/solr/core0/conf/schema.xml: org.xml.sax.SAXParseException; systemId: solrres:/schema.xml; lineNumber: 125; columnNumber: 9; 注释中不允许出现字符串 "--"。
+org.apache.solr.common.SolrException: Could not load conf for core core0: Can't load schema /Users/user/solr-6.3.0/server/solr/core0/conf/schema.xml: org.xml.sax.SAXParseException; systemId: solrres:/schema.xml; lineNumber: 125; columnNumber: 9; 注释中不允许出现字符串 "--"。
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:85)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:840)
+	at org.apache.solr.core.CoreContainer.lambda$load$0(CoreContainer.java:498)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:229)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.solr.common.SolrException: Can't load schema /Users/user/solr-6.3.0/server/solr/core0/conf/schema.xml: org.xml.sax.SAXParseException; systemId: solrres:/schema.xml; lineNumber: 125; columnNumber: 9; 注释中不允许出现字符串 "--"。
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:598)
+	at org.apache.solr.schema.IndexSchema.<init>(IndexSchema.java:183)
+	at org.apache.solr.schema.ManagedIndexSchema.<init>(ManagedIndexSchema.java:104)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:173)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:45)
+	at org.apache.solr.schema.IndexSchemaFactory.buildIndexSchema(IndexSchemaFactory.java:75)
+	at org.apache.solr.core.ConfigSetService.createIndexSchema(ConfigSetService.java:107)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:78)
+	... 7 more
+Caused by: org.apache.solr.common.SolrException: org.xml.sax.SAXParseException; systemId: solrres:/schema.xml; lineNumber: 125; columnNumber: 9; 注释中不允许出现字符串 "--"。
+	at org.apache.solr.core.Config.<init>(Config.java:154)
+	at org.apache.solr.core.Config.<init>(Config.java:90)
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:460)
+	... 14 more
+Caused by: org.xml.sax.SAXParseException; systemId: solrres:/schema.xml; lineNumber: 125; columnNumber: 9; 注释中不允许出现字符串 "--"。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1437)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.scanComment(XMLScanner.java:796)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanComment(XMLDocumentFragmentScannerImpl.java:1039)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2985)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:118)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.solr.core.Config.<init>(Config.java:143)
+	... 16 more
+2017-01-08 15:01:05.309 ERROR (coreContainerWorkExecutor-2-thread-1) [   ] o.a.s.c.CoreContainer Error waiting for SolrCore to be created
+java.util.concurrent.ExecutionException: org.apache.solr.common.SolrException: Unable to create core [core0]
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+	at org.apache.solr.core.CoreContainer.lambda$load$1(CoreContainer.java:526)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:229)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.solr.common.SolrException: Unable to create core [core0]
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:855)
+	at org.apache.solr.core.CoreContainer.lambda$load$0(CoreContainer.java:498)
+	... 5 more
+Caused by: org.apache.solr.common.SolrException: Could not load conf for core core0: Can't load schema /Users/user/solr-6.3.0/server/solr/core0/conf/schema.xml: org.xml.sax.SAXParseException; systemId: solrres:/schema.xml; lineNumber: 125; columnNumber: 9; 注释中不允许出现字符串 "--"。
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:85)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:840)
+	... 6 more
+Caused by: org.apache.solr.common.SolrException: Can't load schema /Users/user/solr-6.3.0/server/solr/core0/conf/schema.xml: org.xml.sax.SAXParseException; systemId: solrres:/schema.xml; lineNumber: 125; columnNumber: 9; 注释中不允许出现字符串 "--"。
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:598)
+	at org.apache.solr.schema.IndexSchema.<init>(IndexSchema.java:183)
+	at org.apache.solr.schema.ManagedIndexSchema.<init>(ManagedIndexSchema.java:104)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:173)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:45)
+	at org.apache.solr.schema.IndexSchemaFactory.buildIndexSchema(IndexSchemaFactory.java:75)
+	at org.apache.solr.core.ConfigSetService.createIndexSchema(ConfigSetService.java:107)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:78)
+	... 7 more
+Caused by: org.apache.solr.common.SolrException: org.xml.sax.SAXParseException; systemId: solrres:/schema.xml; lineNumber: 125; columnNumber: 9; 注释中不允许出现字符串 "--"。
+	at org.apache.solr.core.Config.<init>(Config.java:154)
+	at org.apache.solr.core.Config.<init>(Config.java:90)
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:460)
+	... 14 more
+Caused by: org.xml.sax.SAXParseException; systemId: solrres:/schema.xml; lineNumber: 125; columnNumber: 9; 注释中不允许出现字符串 "--"。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1437)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.scanComment(XMLScanner.java:796)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanComment(XMLDocumentFragmentScannerImpl.java:1039)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2985)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:118)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.solr.core.Config.<init>(Config.java:143)
+	... 16 more
+2017-01-08 15:02:15.244 INFO  (ShutdownMonitor) [   ] o.e.j.s.ServerConnector Stopped ServerConnector@3e94fa46{HTTP/1.1,[http/1.1]}{0.0.0.0:8983}
+2017-01-08 15:02:15.244 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1653844940
+2017-01-08 15:02:15.248 WARN  (ShutdownMonitor) [   ] o.e.j.s.ServletContextHandler ServletContextHandler.setHandler should not be called directly. Use insertHandler or setSessionHandler etc.

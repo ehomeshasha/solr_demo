@@ -1,0 +1,75 @@
+2017-01-08 14:47:06.725 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.8.v20160314
+2017-01-08 14:47:07.024 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 6.3.0
+2017-01-08 14:47:07.024 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2017-01-08 14:47:07.024 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /Users/user/solr-6.3.0
+2017-01-08 14:47:07.081 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2017-01-08T14:47:07.025Z
+2017-01-08 14:47:07.081 INFO  (main) [   ] o.a.s.s.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2017-01-08 14:47:07.100 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: /Users/user/solr-6.3.0/server/solr
+2017-01-08 14:47:07.106 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /Users/user/solr-6.3.0/server/solr/solr.xml
+2017-01-08 14:47:07.337 INFO  (main) [   ] o.a.s.u.UpdateShardHandler Creating UpdateShardHandler HTTP client with params: socketTimeout=600000&connTimeout=60000&retry=true
+2017-01-08 14:47:07.430 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath /Users/user/solr-6.3.0/server/solr
+2017-01-08 14:47:07.436 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [core0]
+2017-01-08 14:47:07.514 INFO  (main) [   ] o.e.j.s.ServerConnector Started ServerConnector@70325e14{HTTP/1.1,[http/1.1]}{0.0.0.0:8983}
+2017-01-08 14:47:07.514 INFO  (main) [   ] o.e.j.s.Server Started @1392ms
+2017-01-08 14:47:07.575 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.SolrResourceLoader [core0] Added 46 libs to classloader, from paths: [/Users/user/solr-6.3.0/contrib/extraction/lib, /Users/user/solr-6.3.0/contrib/langid/lib, /Users/user/solr-6.3.0/contrib/velocity/lib, /Users/user/solr-6.3.0/dist]
+2017-01-08 14:47:07.748 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.u.SolrIndexConfig IndexWriter infoStream solr logging is enabled
+2017-01-08 14:47:07.756 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.SolrConfig Using Lucene MatchVersion: 6.3.0
+2017-01-08 14:47:07.928 WARN  (coreLoadExecutor-6-thread-1) [   ] o.a.s.s.ManagedIndexSchemaFactory The schema has been upgraded to managed, but the non-managed schema schema.xml is still loadable.  PLEASE REMOVE THIS FILE.
+2017-01-08 14:47:08.003 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.s.IndexSchema [core0] Schema name=eol_candidates_schema
+2017-01-08 14:47:08.652 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.s.IndexSchema Loaded schema eol_candidates_schema/1.6 with uniqueid field cb_id
+2017-01-08 14:47:08.727 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.CoreContainer Creating SolrCore 'core0' using configuration from instancedir /Users/user/solr-6.3.0/server/solr/core0
+2017-01-08 14:47:08.782 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.c.SolrCore [[core0] ] Opening new SolrCore at [/Users/user/solr-6.3.0/server/solr/core0], dataDir=[/Users/user/solr-6.3.0/server/solr/core0/data/]
+2017-01-08 14:47:08.873 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2017-01-08 14:47:09.112 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2017-01-08 14:47:09.113 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2017-01-08 14:47:09.127 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2017-01-08 14:47:09.127 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2017-01-08 14:47:09.194 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.s.SolrIndexSearcher Opening [Searcher@bff4abd[core0] main]
+2017-01-08 14:47:09.200 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /Users/user/solr-6.3.0/server/solr/core0/conf
+2017-01-08 14:47:09.213 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-01-08 14:47:09.218 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2017-01-08 14:47:09.224 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.h.c.SuggestComponent Initializing SuggestComponent
+2017-01-08 14:47:09.227 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.s.s.SolrSuggester init: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string}
+2017-01-08 14:47:09.260 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.s.s.SolrSuggester Dictionary loaded with params: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string}
+2017-01-08 14:47:09.261 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.h.c.SuggestComponent Registering searcher listener for suggester: mySuggester - SuggesterListener [core=org.apache.solr.core.SolrCore@3eae0273, suggester=SolrSuggester [ name=mySuggester, sourceLocation=null, storeDir=, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, sizeInBytes=0 ], buildOnCommit=false, buildOnOptimize=false, buildOnStartup=true, isCoreReload=false]
+2017-01-08 14:47:09.262 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.h.c.QueryElevationComponent Loading QueryElevation from: /Users/user/solr-6.3.0/server/solr/core0/conf/elevate.xml
+2017-01-08 14:47:09.279 INFO  (coreLoadExecutor-6-thread-1) [   x:core0] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2017-01-08 14:47:09.310 INFO  (searcherExecutor-7-thread-1-processing-x:core0) [   x:core0] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@bff4abd[core0] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2017-01-08 14:47:09.372 ERROR (searcherExecutor-7-thread-1-processing-x:core0) [   x:core0] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: undefined field text
+	at org.apache.solr.schema.IndexSchema.getDynamicFieldType(IndexSchema.java:1308)
+	at org.apache.solr.schema.IndexSchema$SolrQueryAnalyzer.getWrappedAnalyzer(IndexSchema.java:452)
+	at org.apache.lucene.analysis.DelegatingAnalyzerWrapper$DelegatingReuseStrategy.getReusableComponents(DelegatingAnalyzerWrapper.java:84)
+	at org.apache.lucene.analysis.Analyzer.tokenStream(Analyzer.java:191)
+	at org.apache.lucene.util.QueryBuilder.createFieldQuery(QueryBuilder.java:206)
+	at org.apache.solr.parser.SolrQueryParserBase.newFieldQuery(SolrQueryParserBase.java:371)
+	at org.apache.solr.parser.SolrQueryParserBase.getFieldQuery(SolrQueryParserBase.java:741)
+	at org.apache.solr.parser.SolrQueryParserBase.handleBareTokenQuery(SolrQueryParserBase.java:529)
+	at org.apache.solr.parser.QueryParser.Term(QueryParser.java:309)
+	at org.apache.solr.parser.QueryParser.Clause(QueryParser.java:180)
+	at org.apache.solr.parser.QueryParser.Query(QueryParser.java:101)
+	at org.apache.solr.parser.QueryParser.TopLevelQuery(QueryParser.java:90)
+	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:152)
+	at org.apache.solr.search.LuceneQParser.parse(LuceneQParser.java:50)
+	at org.apache.solr.search.QParser.getQuery(QParser.java:140)
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:161)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:269)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:153)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2213)
+	at org.apache.solr.core.QuerySenderListener.newSearcher(QuerySenderListener.java:72)
+	at org.apache.solr.core.SolrCore.lambda$getSearcher$3(SolrCore.java:1988)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:229)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-01-08 14:47:09.374 INFO  (searcherExecutor-7-thread-1-processing-x:core0) [   x:core0] o.a.s.c.S.Request [core0]  webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} status=400 QTime=60
+2017-01-08 14:47:09.374 INFO  (searcherExecutor-7-thread-1-processing-x:core0) [   x:core0] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-01-08 14:47:09.374 INFO  (searcherExecutor-7-thread-1-processing-x:core0) [   x:core0] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2017-01-08 14:47:09.374 INFO  (searcherExecutor-7-thread-1-processing-x:core0) [   x:core0] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: wordbreak
+2017-01-08 14:47:09.375 INFO  (searcherExecutor-7-thread-1-processing-x:core0) [   x:core0] o.a.s.h.c.SuggestComponent buildOnStartup: mySuggester
+2017-01-08 14:47:09.375 INFO  (searcherExecutor-7-thread-1-processing-x:core0) [   x:core0] o.a.s.s.s.SolrSuggester SolrSuggester.build(mySuggester)
+2017-01-08 14:47:09.401 INFO  (searcherExecutor-7-thread-1-processing-x:core0) [   x:core0] o.a.s.c.SolrCore [core0] Registered new searcher Searcher@bff4abd[core0] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2017-01-08 14:47:47.483 INFO  (ShutdownMonitor) [   ] o.e.j.s.ServerConnector Stopped ServerConnector@70325e14{HTTP/1.1,[http/1.1]}{0.0.0.0:8983}
+2017-01-08 14:47:47.484 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1653844940
+2017-01-08 14:47:47.486 INFO  (coreCloseExecutor-12-thread-1) [   x:core0] o.a.s.c.SolrCore [core0]  CLOSING SolrCore org.apache.solr.core.SolrCore@3eae0273

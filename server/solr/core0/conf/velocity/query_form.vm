@@ -1,0 +1,139 @@
+#**
+ *  Renders the main query form
+ *#
+<script src="#{url_root}/js/lib/md5.min.js"></script>
+<script type="text/javascript">
+/*
+* url 目标url
+* arg 需要替换的参数名称
+* arg_val 替换后的参数的值
+* return url 参数替换后的url
+*/
+function changeURLArg(url,arg,arg_val){
+    var pattern=arg+'=([^&]*)';
+    var replaceText=arg+'='+arg_val;
+    if(url.match(pattern)){
+        var tmp='/('+ arg+'=)([^&]*)/gi';
+        tmp=url.replace(eval(tmp),replaceText);
+        return tmp;
+    }else{
+        if(url.match('[\?]')){
+            return url+'&'+replaceText;
+        }else{
+            return url+'?'+replaceText;
+        }
+    }
+    return url+'\n'+arg+'\n'+arg_val;
+}
+$(function(){
+    $("#query-form").submit(function(){
+
+        var appid = '20170110000035589';
+        var key = 'H2AcMGckmnPnF7TDTn_N';
+        var salt = (new Date).getTime();
+        var query = $("#query_string_text").val();
+        var from = 'zh';
+        var to = 'en';
+        var str1 = appid + query + salt +key;
+        var sign = md5(str1);
+        $.ajax({
+            url: 'http://api.fanyi.baidu.com/api/trans/vip/translate',
+            type: 'get',
+            dataType: 'jsonp',
+            data: {
+                q: query,
+                appid: appid,
+                salt: salt,
+                from: from,
+                to: to,
+                sign: sign
+            },
+            success: function (data) {
+                console.log(data);
+                var translate_query = data.trans_result[0].dst
+                var jump_url = changeURLArg(window.location.href, "q", translate_query)
+                alert("origin query string: "+query+
+                      "\ntranslate query string:"+ translate_query+
+                      "\njump_url: "+jump_url)
+                window.location.href = jump_url
+            },
+            error: function(data) {
+                var jump_url = changeURLArg(window.location.href, "q", query)
+                alert("origin query string: "+query+
+                        "\ntranslate query string:"+ query+
+                        "\njump_url: "+jump_url)
+                window.location.href = jump_url
+            }
+        });
+        return false;
+
+
+
+    });
+});
+
+
+
+
+</script>
+<div class="query-box">
+  <form id="query-form" action="#{url_for_home}" method="GET">
+
+    <div class="inputs">
+      <span #annTitle("Add the query using the &q= parameter")>
+        Find:
+        <input type="text" id="query_string_text" name="q" value=""/>
+        <button id="submit_btn" type="submit">submit</button>
+##        <input type="submit" id="querySubmit"/>
+##        <input type="reset"/>
+      </span>
+##      <div class="query-boost">
+##        <span #annTitle("Add the boost function &bf=price to the query")>
+##          <input type="checkbox" name="bf" value="price"
+##            #if($request.params.get('bf') == 'price')checked="true"#end
+##          >
+##            Boost by Price
+##          </input>
+##        </span>
+##      #parse("query_spatial.vm")
+##      #parse("query_group.vm")
+##      </div>
+  </div>
+
+    #if($request.params.get('debugQuery'))
+      <input type="hidden" name="debugQuery" value="true"/>
+    #end
+    #if($annotate == true)
+      <input type="hidden" name="annotateBrowse" value="true"/>
+    #end
+    #foreach($fq in $request.params.getParams('fq'))
+      #if ($fq != "{!bbox}")
+        <input type="hidden" name="fq" id="allFQs" value="$esc.html($fq)"/>
+      #end
+    #end
+
+    <div class="constraints" #annTitle("Lists out the &fq filters.  Click to remove.")>
+      #foreach($fq in $params.getParams('fq'))
+        #set($previous_fq_count=$velocityCount - 1)
+        #if($fq != '')
+          &gt;
+          <a style="{text-decoration: line-through;}"
+            href="#url_for_filters($request.params.getParams('fq').subList(0,$previous_fq_count))"
+          >$fq</a>
+        #end
+      #end
+    </div>
+
+    <div class="parsed_query_header">
+      #if($request.params.get('debugQuery'))
+        <a href="#" onclick='jQuery(this).siblings("div").toggle(); return false;'>toggle parsed query</a>
+        <div class="parsed_query" style="display:none">$response.response.debug.parsedquery</div>
+      #end
+      #set($queryOpts = $request.params.get("queryOpts"))
+      #if($queryOpts && $queryOpts != "")
+        <input type="hidden" name="queryOpts" value="$queryOpts"/>
+      #end
+    </div>
+
+  </form>
+</div>

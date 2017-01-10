@@ -1,0 +1,43 @@
+#**
+ *  Query settings for grouping by fields,
+ *  e.g.: Manufacturer or Popularity
+ *#
+
+#set($queryOpts = $params.get("queryOpts"))
+
+#if($queryOpts == "group")
+  <div>
+    #set($groupF = $request.params.get('group.field'))
+
+    <label #annTitle("Add the &group.field parameter. Multiselect is supported")>
+      Group By:
+      <select id="group" name="group.field" multiple="true">
+        ## TODO: Handle multiple selects correctly
+        ## TODO: fix empty / "No Group" selection
+
+        <option value=""
+          #if($groupF == '')selected="true"#end
+        >
+          No Group
+        </option>
+
+        <option value="dim_college_college_name"
+          #if($groupF == 'dim_college_college_name')selected="true"#end
+        >
+            dim_college_college_name
+        </option>
+
+        <option value="dim_country_country_full"
+          #if($groupF == 'dim_country_country_full')selected="true"#end
+        >
+            dim_country_country_full
+        </option>
+
+      </select>
+    </label>  
+
+    <input type="hidden" name="group" value="true"/>
+
+  </div>
+
+#end

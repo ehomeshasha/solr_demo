@@ -1,0 +1,122 @@
+<dataConfig>
+    <dataSource type="JdbcDataSource" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://127.0.0.1:3306/eol_candidates" user="root" password="root" />
+    
+    <!--cb_id-->
+    <!--country_id-->
+    <!--college_id-->
+    <!--discipline_id-->
+    <!--fullname-->
+    <!--academic_title-->
+    <!--other_title-->
+    <!--nationality-->
+    <!--email-->
+    <!--phonenumber-->
+    <!--external_link-->
+    <!--experience-->
+    <!--desc-->
+    <!--extra-->
+    <!--avatar_url-->
+    <!--discipline_desc-->
+    <!--create_time-->
+    <!--last_modified-->
+    <!--dim_country_country_ab-->
+    <!--dim_country_country_full-->
+    <!--dim_college_state_id-->
+    <!--dim_college_city_id-->
+    <!--dim_college_college_name-->
+    <!--dim_college_college_desc-->
+    <!--dim_state_state_ab-->
+    <!--dim_state_state_full-->
+    <!--dim_city_city_ab-->
+    <!--dim_city_city_full-->
+    <!--dim_discipline_discipline_origin-->
+    <!--dim_discipline_discipline_chinese-->
+    <!--candidate_courses_courses_no-->
+    <!--candidate_courses_courses_desc-->
+    <!--candidate_education_college-->
+    <!--candidate_education_discipline-->
+    <!--candidate_education_desc-->
+    <!--candidate_publications_publications-->
+    <!--candidate_research_interests-->
+    <!--candidate_research_current_research-->
+    <!--candidate_research_research_summary-->
+    <!--candidate_workexperience_desc-->
+    
+    <document name="candidate_document">
+        <entity name="candidate_basic" pk="cb_id"
+            query="select * from candidate_basic" deltaQuery="select cb_id from candidate_basic where last_modified > '${dataimporter.last_index_time}'" transformer="DateFormatTransformer">
+            <field name="cb_id" column="cb_id"/>
+            <field name="country_id" column="country_id"/>
+            <field name="college_id" column="college_id"/>
+            <field name="discipline_id" column="discipline_id"/>
+            <field name="fullname" column="fullname"/>
+            <field name="academic_title" column="academic_title"/>
+            <field name="other_title" column="other_title"/>
+            <field name="nationality" column="nationality"/>
+            <field name="email" column="email"/>
+            <field name="phonenumber" column="phonenumber"/>
+            <field name="external_link" column="external_link"/>
+            <field name="experience" column="experience"/>
+            <field name="desc" column="desc"/>
+            <field name="extra" column="extra"/>
+            <field name="avatar_url" column="avatar_url"/>
+            <field name="discipline_desc" column="discipline_desc"/>
+            <field name="url" column="url"/>
+            <field name="create_time" column="create_time_format" sourceColName="create_time" dateTimeFormat="yyyy-MM-dd'T'HH:mm:ss'Z'"/>
+            <field name="last_modified" column="last_modified_format" sourceColName="last_modified" dateTimeFormat="yyyy-MM-dd'T'HH:mm:ss'Z'" />
+            <entity name="dim_country"
+                query="select * from dim_country where country_id='${candidate_basic.country_id}'">
+                <field name="dim_country_country_ab" column="country_ab" />
+                <field name="dim_country_country_full" column="country_full" />
+            </entity>
+            <entity name="dim_college"
+                query="select * from dim_college where college_id='${candidate_basic.college_id}'">
+                <field name="dim_college_state_id" column="state_id" />
+                <field name="dim_college_city_id" column="city_id" />
+                <field name="dim_college_college_name" column="college_name" />
+                <field name="dim_college_college_desc" column="college_desc" />
+                <entity name="dim_state"
+                    query="select * from dim_state where state_id='${dim_college.state_id}'">
+                    <field name="dim_state_state_ab" column="state_ab" />
+                    <field name="dim_state_state_full" column="state_full" />
+                </entity>
+                <entity name="dim_city"
+                    query="select * from dim_city where city_id='${dim_college.city_id}'">
+                    <field name="dim_city_city_ab" column="city_ab" />
+                    <field name="dim_city_city_full" column="city_full" />
+                </entity>
+            </entity>
+            <entity name="dim_discipline"
+                query="select * from dim_discipline where discipline_id='${candidate_basic.discipline_id}'">
+                <field name="dim_discipline_discipline_origin" column="discipline_origin" />
+                <field name="dim_discipline_discipline_chinese" column="discipline_chinese" />
+            </entity>
+            <entity name="candidate_courses"
+                query="select * from candidate_courses where cb_id='${candidate_basic.cb_id}'">
+                <field name="candidate_courses_courses_no" column="courses_no" />
+                <field name="candidate_courses_courses_desc" column="courses_desc" />
+            </entity>
+            <entity name="candidate_education"
+                query="select * from candidate_education where cb_id='${candidate_basic.cb_id}'">
+                <field name="candidate_education_college" column="college" />
+                <field name="candidate_education_discipline" column="discipline" />
+                <field name="candidate_education_desc" column="desc" />
+            </entity>
+            <entity name="candidate_publications"
+                query="select * from candidate_publications where cb_id='${candidate_basic.cb_id}'">
+                <field name="candidate_publications_publications" column="publications" />
+            </entity>
+            <entity name="candidate_research"
+                query="select * from candidate_research where cb_id='${candidate_basic.cb_id}'">
+                <field name="candidate_research_interests" column="interests" />
+                <field name="candidate_research_current_research" column="current_research" />
+                <field name="candidate_research_research_summary" column="research_summary" />
+            </entity>
+            <entity name="candidate_workexperience"
+                query="select * from candidate_workexperience where cb_id='${candidate_basic.cb_id}'">
+                <field name="candidate_workexperience_desc" column="desc" />
+            </entity>
+        </entity>
+    </document>
+</dataConfig>
+

@@ -1,0 +1,470 @@
+#**
+ *  Render a complex document in the results list
+ *#
+
+## Load Mime-Type List and Mapping
+#parse('mime_type_lists.vm')
+## Sets:
+## * supportedMimeTypes, AKA supportedtypes
+## * mimeExtensionsMap, AKA extMap
+
+## url
+#if($doc.getFieldValue('url'))
+  #set($url = $esc.html($doc.getFirstValue('url')))
+#else
+  #set($url = "")
+#end
+
+
+
+## academic_title
+#if($doc.getFieldValue('academic_title'))
+  #set($academic_title = $esc.html($doc.getFirstValue('academic_title')))
+#else
+  #set($academic_title = "")
+#end
+
+## avatar_url
+#if($doc.getFieldValue('avatar_url'))
+  #set($avatar_url = $esc.html($doc.getFirstValue('avatar_url')))
+#else
+  #set($avatar_url = "")
+#end
+
+## candidate_courses_courses_desc
+#if($doc.getFieldValue('candidate_courses_courses_desc'))
+  #set($candidate_courses_courses_desc = $esc.html($doc.getFirstValue('candidate_courses_courses_desc')))
+#else
+  #set($candidate_courses_courses_desc = "")
+#end
+
+## candidate_courses_courses_no
+#if($doc.getFieldValue('candidate_courses_courses_no'))
+  #set($candidate_courses_courses_no = $esc.html($doc.getFirstValue('candidate_courses_courses_no')))
+#else
+  #set($candidate_courses_courses_no = "")
+#end
+
+## candidate_education_college
+#if($doc.getFieldValue('candidate_education_college'))
+  #set($candidate_education_college = $esc.html($doc.getFirstValue('candidate_education_college')))
+#else
+  #set($candidate_education_college = "")
+#end
+
+## candidate_education_desc
+#if($doc.getFieldValue('candidate_education_desc'))
+  #set($candidate_education_desc = $esc.html($doc.getFirstValue('candidate_education_desc')))
+#else
+  #set($candidate_education_desc = "")
+#end
+
+## candidate_education_discipline
+#if($doc.getFieldValue('candidate_education_discipline'))
+  #set($candidate_education_discipline = $esc.html($doc.getFirstValue('candidate_education_discipline')))
+#else
+  #set($candidate_education_discipline = "")
+#end
+
+## candidate_publications_publications
+#if($doc.getFieldValue('candidate_publications_publications'))
+  #set($candidate_publications_publications = $esc.html($doc.getFirstValue('candidate_publications_publications')))
+#else
+  #set($candidate_publications_publications = "")
+#end
+
+## candidate_research_current_research
+#if($doc.getFieldValue('candidate_research_current_research'))
+  #set($candidate_research_current_research = $esc.html($doc.getFirstValue('candidate_research_current_research')))
+#else
+  #set($candidate_research_current_research = "")
+#end
+
+## candidate_research_interests
+#if($doc.getFieldValue('candidate_research_interests'))
+  #set($candidate_research_interests = $esc.html($doc.getFirstValue('candidate_research_interests')))
+#else
+  #set($candidate_research_interests = "")
+#end
+
+## candidate_research_research_summary
+#if($doc.getFieldValue('candidate_research_research_summary'))
+  #set($candidate_research_research_summary = $esc.html($doc.getFirstValue('candidate_research_research_summary')))
+#else
+  #set($candidate_research_research_summary = "")
+#end
+
+## candidate_workexperience_desc
+#if($doc.getFieldValue('candidate_workexperience_desc'))
+  #set($candidate_workexperience_desc = $esc.html($doc.getFirstValue('candidate_workexperience_desc')))
+#else
+  #set($candidate_workexperience_desc = "")
+#end
+
+## cb_id
+#if($doc.getFieldValue('cb_id'))
+  #set($cb_id = $esc.html($doc.getFirstValue('cb_id')))
+#else
+  #set($cb_id = "")
+#end
+
+## college_id
+#if($doc.getFieldValue('college_id'))
+  #set($college_id = $esc.html($doc.getFirstValue('college_id')))
+#else
+  #set($college_id = "")
+#end
+
+## country_id
+#if($doc.getFieldValue('country_id'))
+  #set($country_id = $esc.html($doc.getFirstValue('country_id')))
+#else
+  #set($country_id = "")
+#end
+
+## create_time
+#if($doc.getFieldValue('create_time'))
+  #set($create_time = $esc.html($doc.getFirstValue('create_time')))
+#else
+  #set($create_time = "")
+#end
+
+## desc
+#if($doc.getFieldValue('desc'))
+  #set($desc = $esc.html($doc.getFirstValue('desc')))
+#else
+  #set($desc = "")
+#end
+
+## dim_city_city_ab
+#if($doc.getFieldValue('dim_city_city_ab'))
+  #set($dim_city_city_ab = $esc.html($doc.getFirstValue('dim_city_city_ab')))
+#else
+  #set($dim_city_city_ab = "")
+#end
+
+## dim_city_city_full
+#if($doc.getFieldValue('dim_city_city_full'))
+  #set($dim_city_city_full = $esc.html($doc.getFirstValue('dim_city_city_full')))
+#else
+  #set($dim_city_city_full = "")
+#end
+
+## dim_college_city_id
+#if($doc.getFieldValue('dim_college_city_id'))
+  #set($dim_college_city_id = $esc.html($doc.getFirstValue('dim_college_city_id')))
+#else
+  #set($dim_college_city_id = "")
+#end
+
+## dim_college_college_desc
+#if($doc.getFieldValue('dim_college_college_desc'))
+  #set($dim_college_college_desc = $esc.html($doc.getFirstValue('dim_college_college_desc')))
+#else
+  #set($dim_college_college_desc = "")
+#end
+
+## dim_college_college_name
+#if($doc.getFieldValue('dim_college_college_name'))
+  #set($dim_college_college_name = $esc.html($doc.getFirstValue('dim_college_college_name')))
+#else
+  #set($dim_college_college_name = "")
+#end
+
+## dim_college_state_id
+#if($doc.getFieldValue('dim_college_state_id'))
+  #set($dim_college_state_id = $esc.html($doc.getFirstValue('dim_college_state_id')))
+#else
+  #set($dim_college_state_id = "")
+#end
+
+## dim_country_country_ab
+#if($doc.getFieldValue('dim_country_country_ab'))
+  #set($dim_country_country_ab = $esc.html($doc.getFirstValue('dim_country_country_ab')))
+#else
+  #set($dim_country_country_ab = "")
+#end
+
+## dim_country_country_full
+#if($doc.getFieldValue('dim_country_country_full'))
+  #set($dim_country_country_full = $esc.html($doc.getFirstValue('dim_country_country_full')))
+#else
+  #set($dim_country_country_full = "")
+#end
+
+## dim_discipline_discipline_chinese
+#if($doc.getFieldValue('dim_discipline_discipline_chinese'))
+  #set($dim_discipline_discipline_chinese = $esc.html($doc.getFirstValue('dim_discipline_discipline_chinese')))
+#else
+  #set($dim_discipline_discipline_chinese = "")
+#end
+
+## dim_discipline_discipline_origin
+#if($doc.getFieldValue('dim_discipline_discipline_origin'))
+  #set($dim_discipline_discipline_origin = $esc.html($doc.getFirstValue('dim_discipline_discipline_origin')))
+#else
+  #set($dim_discipline_discipline_origin = "")
+#end
+
+## dim_state_state_ab
+#if($doc.getFieldValue('dim_state_state_ab'))
+  #set($dim_state_state_ab = $esc.html($doc.getFirstValue('dim_state_state_ab')))
+#else
+  #set($dim_state_state_ab = "")
+#end
+
+## dim_state_state_full
+#if($doc.getFieldValue('dim_state_state_full'))
+  #set($dim_state_state_full = $esc.html($doc.getFirstValue('dim_state_state_full')))
+#else
+  #set($dim_state_state_full = "")
+#end
+
+## discipline_desc
+#if($doc.getFieldValue('discipline_desc'))
+  #set($discipline_desc = $esc.html($doc.getFirstValue('discipline_desc')))
+#else
+  #set($discipline_desc = "")
+#end
+
+## discipline_id
+#if($doc.getFieldValue('discipline_id'))
+  #set($discipline_id = $esc.html($doc.getFirstValue('discipline_id')))
+#else
+  #set($discipline_id = "")
+#end
+
+## email
+#if($doc.getFieldValue('email'))
+  #set($email = $esc.html($doc.getFirstValue('email')))
+#else
+  #set($email = "")
+#end
+
+## experience
+#if($doc.getFieldValue('experience'))
+  #set($experience = $esc.html($doc.getFirstValue('experience')))
+#else
+  #set($experience = "")
+#end
+
+## external_link
+#if($doc.getFieldValue('external_link'))
+  #set($external_link = $esc.html($doc.getFirstValue('external_link')))
+#else
+  #set($external_link = "")
+#end
+
+## extra
+#if($doc.getFieldValue('extra'))
+  #set($extra = $esc.html($doc.getFirstValue('extra')))
+#else
+  #set($extra = "")
+#end
+
+## fullname
+#if($doc.getFieldValue('fullname'))
+  #set($fullname = $esc.html($doc.getFirstValue('fullname')))
+#else
+  #set($fullname = "")
+#end
+
+## last_modified
+#if($doc.getFieldValue('last_modified'))
+  #set($last_modified = $esc.html($doc.getFirstValue('last_modified')))
+#else
+  #set($last_modified = "")
+#end
+
+## nationality
+#if($doc.getFieldValue('nationality'))
+  #set($nationality = $esc.html($doc.getFirstValue('nationality')))
+#else
+  #set($nationality = "")
+#end
+
+## other_title
+#if($doc.getFieldValue('other_title'))
+  #set($other_title = $esc.html($doc.getFirstValue('other_title')))
+#else
+  #set($other_title = "")
+#end
+
+## phonenumber
+#if($doc.getFieldValue('phonenumber'))
+  #set($phonenumber = $esc.html($doc.getFirstValue('phonenumber')))
+#else
+  #set($phonenumber = "")
+#end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## TODO: falling back to file extension is convenient,
+## except when you don't have an icon for that extension
+## example "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+## document with a .docx extension.
+## It'd be nice to fall back to an "unknown" or the existing "file" type
+## We sort of do this below, but only if the filename has no extension
+## (anything after the last dot).
+
+#if(!$filetype)
+  #set($filetype = $filename.substring($filename.lastIndexOf(".")).substring(1))
+#end
+
+## #if(!$filetype)
+##   #set($filetype = "file")
+## #end
+## #if(!$supportedMimeTypes.contains($filetype))
+##   #set($filetype = "file")
+## #end
+
+## Row 1: Icon and Title and mlt link
+<div class="">
+  ## Icon
+  ## Small file type icons from http://www.splitbrain.org/projects/file_icons (public domain)
+      <table>
+          <tr>
+              <td width="300" valign="top">
+                  <div><a href="${url}" target="_blank"><b>$fullname</b></a></div>
+                  <div><a href="${url}" target="_blank"><img style="width: 150px;height: 175px" src="${avatar_url}" align="center"></a></div>
+                  <div>
+                      <table>
+                          <tr>
+                              <td>Phone:</td>
+                              <td>${phonenumber}</td>
+                          </tr>
+                          <tr>
+                              <td>Email:</td>
+                              <td>${email}</td>
+                          </tr>
+                          <tr>
+                              <td>Site:</td>
+                              <td><a href="${external_link}">${external_link}</a></td>
+                          </tr>
+                      </table>
+
+                  </div>
+              </td>
+              <td width="" valign="top">
+                  <h3>College & University</h3>
+                  <p>${dim_college_college_name}</p>
+                  <h3>Location</h3>
+                  <p>${dim_city_city_full}, ${dim_state_state_full}, ${dim_country_country_full}</p>
+                  <h3>Academic Title</h3>
+                  <p>${academic_title}</p>
+                  <h3>Research Interests</h3>
+                  <p>${candidate_research_interests}</p>
+              </td>
+          </tr>
+    </table>
+
+
+
+##  ## Title, hyperlinked
+##  <a href="${url}" target="_blank">
+##    <b>$fullname</b></a>
+##
+##  ## Link for MLT / More Like This / Find Similar
+##  <span class="mlt">
+##    #if($params.getBool('mlt', false) == false)
+##      <a href="#lensNoQ&q=id:%22$docId%22&mlt=true">
+##        More Like This</a>
+##    #end
+##  </span>
+
+</div>
+
+## Row 2?: ID / URL
+##<div>
+##  Id: #field('id')
+##</div>
+##
+#### Resource Name
+##<div>
+##  #if($doc.getFieldValue('resourcename'))
+##    Resource name: $filename
+##  #elseif($url)
+##    URL: $url
+##  #end
+##  #if($ct)
+##    ($ct)
+##  #end
+##</div>
+##
+#### Author
+###if($doc.getFieldValue('author'))
+##  <div>
+##    Author: #field('author')
+##  </div>
+###end
+##
+#### Last_Modified Date
+###if($doc.getFieldValue('last_modified'))
+##  <div>
+##    last-modified:
+##    #field('last_modified')
+##  </div>
+###end
+##
+#### Main content of doc
+##<div class="result-body">
+##  #field('content')
+##</div>
+##
+#### Display Similar Documents / MLT = More Like This
+##<div class="mlt">
+##  #set($mlt = $mltResults.get($docId))
+##  #set($mltOn = $params.getBool('mlt'))
+##  #if($mltOn == true)
+##    <div class="field-name">
+##      Similar Items
+##    </div>
+##  #end
+##  ## If has MLT enabled An Entries to show
+##  #if ($mltOn && $mlt && $mlt.size() > 0)
+##    <ul>
+##      #foreach($mltHit in $mlt)
+##        #set($mltId = $mltHit.getFieldValue('id'))
+##        <li>
+##          <div>
+##            <a href="#url_for_home?q=id:$mltId">
+##              $mltId</a>
+##          </div>
+##          <div>
+##            <span class="field-name">
+##              Title:
+##            </span>
+##            $mltHit.getFieldValue('title')
+##          </div>
+##          <div>
+##            <span class="field-name">
+##              Author:
+##            </span>
+##            $mltHit.getFieldValue('author')
+##            <span class="field-name">
+##              Description:
+##            </span>
+##            $mltHit.getFieldValue('description')
+##          </div>
+##        </li>
+##      #end    ## end for each mltHit in $mlt
+##    </ul>
+##  ## Else MLT Enabled but no mlt results for this query
+##  #elseif($mltOn && $mlt.size() == 0)
+##    <div>No Similar Items Found</div>
+##  #end
+##</div>  ## div class=mlt
+
+#parse('debug.vm')
